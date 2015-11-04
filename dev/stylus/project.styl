@@ -26,6 +26,7 @@ footer, .container:after
 html{
   open-sans()
   regular()
+  font-size 15px
 }
 img{
   display: inline-block;
@@ -40,6 +41,95 @@ textarea{
   max-height: 400px;
   max-width: 100%;
 }
+i.icon
+  position relative
+  display inline-block
+/* Owl carousel custom styles */
+.owl-controls
+  position absolute
+  left 0
+  top 0
+  width 0
+  height 100%
+.owl-item
+  opacity 0
+  transform scale(0.2)
+  transition all .1s ease-in
+  // anim(opacity, .3s)
+  &.active
+    opacity 1
+    transform scale(1)
+.owl-next,
+.owl-prev
+  width: 27px;
+  height: 47px;
+  background-image url('../images/sprite.png')
+  background-repeat no-repeat
+  text-indent -9999px
+  position absolute
+  top 50%
+  margin-top -(@height/2)
+  z-index 20
+  cursor pointer
+  &.disabled
+    opacity .2
+    cursor default
+.owl-prev
+  background-position 0 -35px
+  left -47px
+  &:hover
+    background-position -71px -35px
+.owl-next
+  background-position -111px -35px
+  right -47px
+  &:hover
+     background-position -39px -35px
+.owl-d
+  position absolute
+  bottom 10px
+  right 10px
+  z-index 10
+  clearfix()
+.owl-dot
+  float left
+  margin-left 5px
+  margin-right 5px
+  cursor pointer
+  span
+    display block
+    width 16px
+    height 16px
+    position relative
+    top 3px
+    border-radius 50%
+    border 2px solid $black
+    anim(border-color, .25s)
+    &:hover
+      border-color $green
+  &.active
+    span
+      top 0
+      width 22px
+      height 22px
+      background-color $green
+      border-color $green
 /*!=================
   Extended classes
 ====================*/
+.headling
+  font-size 30px
+  line-height 1
+  display inline-block
+  margin-bottom 40px
+.green-border-button
+  display inline-block
+  border 1px solid $green
+  width 145px
+  height 40px
+  line-height 38px
+  text-align center
+  color $black
+  anim(all, .25s)
+  &:hover
+    background-color $green
+    color #fff
