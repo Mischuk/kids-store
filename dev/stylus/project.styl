@@ -23,10 +23,13 @@ footer, .container:after
 /*!=================
   Basic elements
 ====================*/
+
 html{
   open-sans()
   regular()
   font-size 15px
+  -webkit-box-sizing border-box
+  -moz-box-sizing border-box
   box-sizing border-box
 }
 img{
@@ -45,21 +48,22 @@ textarea{
 i.icon
   position relative
   display inline-block
+
 /* Owl carousel custom styles */
+.owl-item
+  opacity 0
+  anim(opacity, .25s)
+  &.active
+    opacity 1
+.content-carousel
+  .owl-item
+    opacity 1
 .owl-controls
   position absolute
   left 0
   top 0
   width 0
   height 100%
-.owl-item
-  opacity 0
-  transform scale(0.2)
-  transition all .1s ease-in
-  // anim(opacity, .3s)
-  &.active
-    opacity 1
-    transform scale(1)
 .owl-next,
 .owl-prev
   width: 27px;
@@ -85,23 +89,32 @@ i.icon
   right -47px
   &:hover
      background-position -39px -35px
+.owl-n,
 .owl-d
   position absolute
+  left 0
+  top 0
+  height 100%
+  width 100%
+.owl-d
+  height 22px
   bottom 10px
-  right 10px
-  z-index 10
-  clearfix()
+  top auto
+  text-align right
+  .wrapper
+    padding-right 5px
 .owl-dot
-  float left
+  display inline-block
+  vertical-align middle
   margin-left 5px
   margin-right 5px
   cursor pointer
   span
     display block
+    z-index 10
     width 16px
     height 16px
     position relative
-    top 3px
     border-radius 50%
     border 2px solid $black
     anim(border-color, .25s)
@@ -122,6 +135,8 @@ i.icon
   line-height 1
   display inline-block
   margin-bottom 40px
+  letter-spacing .5px
+
 .green-border-button
   display inline-block
   border 1px solid $green
@@ -134,3 +149,61 @@ i.icon
   &:hover
     background-color $green
     color #fff
+
+
+.burger,
+.burger:hover,
+.burger:active,
+.burger:visited
+  text-decoration: none;
+  color: #a39f9e
+.burger
+  margin: 0
+  display: inline-block;
+.burger .burger-label
+  line-height: 30px;
+  font-size: 30px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 12px;
+.burger .burger-icon
+  display: inline-block
+  width: 36px
+  height: 30px
+.burger .burger-icon span,
+.burger .burger-icon span:before,
+.burger .burger-icon span:after
+  display: block
+  width: 100%
+  height: 6px
+  background: #a39f9e
+  transition: all 0.5s
+  backface-visibility: hidden
+.burger .burger-icon span
+  position: relative;
+  margin: 0
+.burger .burger-icon span:before,
+.burger .burger-icon span:after
+  position: absolute
+  content: ""
+.burger .burger-icon span:before
+  top: -8px
+.burger .burger-icon span:after
+  top: 8px
+.burger:hover .burger-icon span:before
+  transform: translate(0px, -4px)
+.burger:hover .burger-icon span:after
+  transform: translate(0px, 4px)
+.burger.selected .burger-icon span:before
+  transform: translate(0px, 8px) rotate(-45deg)
+.burger.selected .burger-icon span:after
+  transform: translate(0px, -8px) rotate(45deg)
+.burger.selected .burger-icon span
+  background transparent
+.menu-trigger
+  position absolute
+  left 2%
+  top 18px
+  display none
+  z-index 20
+

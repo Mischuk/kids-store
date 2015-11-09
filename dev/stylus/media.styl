@@ -1,0 +1,554 @@
+@media screen and (max-width: 1260px)
+  html,
+  body,
+  footer,
+  .container,
+  .container:after
+    min-width 240px
+  .wrapper
+    width 96%
+  .headling
+    margin-bottom 4%
+  .top-header
+    .main-search
+      position absolute
+      width 140px
+      right 200px
+      top 0
+      &.active
+        width 99%
+        right 0.5%
+  .menu li:first-child a
+    padding-left 12px
+  .upper-level-menu
+    display table
+    .main-catalog
+      width auto !important
+      float none
+      display table-cell
+      min-width 100px
+      > a
+        padding 0
+  .main-menu
+    .secondary-menu
+      .col-menu
+        a
+          padding-left 20px
+          &:after
+            left 0
+          &:hover
+            padding-left 35px
+            &:after
+              content ''
+              left 20px
+  .main-carousel
+    margin-bottom 4%
+    article
+      width 40%
+    .images
+      width 60%
+      float right
+      background-position center
+  .main-categories
+    height 870px
+    margin-bottom 4%
+    .item
+      background-size cover
+    .category-1,
+    .category-2,
+    .category-4,
+    .category-5,
+    .category-6
+      height 32%
+    .category-2,
+    .category-3,
+    .category-5,
+    .category-6
+      width 32%
+    .category-1,
+    .category-4
+      width 66%
+    .category-1,
+    .category-3,
+    .category-5
+      margin-right 2%
+    .category-1,
+    .category-2,
+    .category-4
+      margin-bottom 2%
+    .category-3
+      height 66%
+
+  .popular-items
+    .item
+      width 23%
+      margin-left 2%
+      margin-bottom 2%
+      &:nth-child(5n+1)
+        margin-left 2%
+        float left
+        clear none
+      &:nth-child(4n+1)
+        clear left
+        margin-left 0
+      &:hover
+        &:after
+          content ''
+          width 110%
+          height 20px
+          top -2%
+          position absolute
+          left -5%
+          border 3px solid $green
+          border-bottom none
+          z-index 20
+        .item-wrapper
+          width 110%
+          left -5%
+          top 0
+          padding 0 5%
+          border none
+          border-bottom 3px solid $green
+          &:after,
+          &:before
+            content ''
+            position absolute
+            top 0
+            width 3px
+            height 100%
+            background-color $green
+          &:before
+            left 0
+          &:after
+            right 0
+  .company-story article:after
+    right -25%
+  .top-footer
+    padding-top 30px
+  .top-footer .menu
+    width 450px
+  .top-footer .rss-form h3
+    margin-bottom 5px
+  .top-footer .rss-form
+    margin-left 0
+  .top-footer .socials
+    width 230px
+    margin-top 10px
+  .top-header a
+    padding 0 7px
+  .owl-prev
+    left 0
+  .owl-next
+    right 0
+  .main-carousel .carousel-initial .wrapper
+    padding-left 40px
+    padding-right 40px
+  .main-carousel article h2
+    font-size 38px
+    line-height 1
+@media screen and (max-width: 960px)
+  .top-header a
+    padding 0 5px
+  .menu-trigger
+    display block
+  .mobile-menu
+    position absolute
+    left -2.1%
+    top 42px
+    width 320px
+    background-color $brown
+    z-index 20
+    padding-top 30px
+    box-shadow 0 0 3px 1px rgba(0,0,0,.35)
+    transform translateX(-110%)
+    anim(transform , .25s)
+    .main-search
+      width 100%
+      right 0
+      margin 0
+      &.active
+        width 100%
+        right 0
+    .menu
+      float none
+      width 100%
+      ul
+        width 100%
+      li
+        float none
+        width 100%
+        a
+          padding 0 20px !important
+  header
+    overflow hidden
+  header.open
+    overflow visible
+    .mobile-menu.open
+      transform translateX(0%)
+  .bottom-footer
+    height 35px
+    line-height 35px
+  .top-footer
+    padding-top 15px
+    height 210px
+    .menu
+      a
+        padding-left 0 !important
+    .menu,
+    .contacts,
+    .rss-form,
+    .socials
+      width 50%
+      float left
+      margin-left 0
+      margin-right 0
+    .socials
+      text-align right
+      margin-top 0
+      ul
+        margin-top 0
+        li
+          float right
+          margin-left 10px
+          margin-right 0
+  .upper-level-menu .main-catalog
+    min-width 0
+  .upper-level-menu .main-catalog > a
+    font-size 14px
+  header
+    overflow visible
+  .main-catalog-list .icon-category-link .green-border-button
+    display inline-block !important
+    height 40px !important
+  .main-menu .secondary-menu .col
+    li
+      display table
+      width 100%
+    a
+      padding-top 0
+      padding-bottom 0
+      height 32px
+      display table-cell
+      vertical-align middle
+  .main-carousel article .details
+    margin-top 0
+  .main-carousel article h2
+    padding-bottom 15px
+    margin-bottom 15px
+  .popular-items
+    .item
+      height 570px
+    .item-footer .top
+      height 90px
+      .price,
+      .add-to-cart
+        width 100%
+        a
+          margin 10px 0
+  .company-story article p
+    position relative
+    z-index 10
+  .top-header .user-authorization
+    width 100%
+    float none
+    margin-left 0
+    border-top 1px solid #a39f9e
+    a
+      padding 0 20px
+  .bottom-header,
+  .bottom-header .wrapper
+    position static
+  .bottom-header .contacts .tel
+    position absolute
+    right: 130px;
+    top: 5px;
+    a
+      color #fff
+  .bottom-header .user-cart
+    margin-top 0
+    position absolute
+    right 0
+    top 0
+  .bottom-header .user-cart .cart span
+    display none
+  .bottom-header .user-cart .cart i
+    position absolute
+    right 2%
+    top 5px
+  .bottom-header .user-cart .cart-details .total-items
+    font-size 0
+    span
+      width 24px
+      height 24px
+      line-height 38px
+      text-align center
+      position absolute
+      right 2%
+      top 2px
+      font-size 11px
+      color #fff
+  .bottom-header .user-cart .cart-details .total-summ
+    font-size 0
+    span
+      width 100px
+      font-size 15px
+      color #fff
+      position absolute
+      right 30px
+      text-align right
+      top 0
+      height 35px
+      line-height 35px
+  .bottom-header .user-cart
+    width 100px
+    margin-bottom 0
+    margin-top 5px
+  .bottom-header .contacts .email,
+  .bottom-header .contacts .callback
+    display none
+  .bottom-header .logo
+    top 90px
+    margin-top 0
+@media screen and (max-width 840px)
+  .main-catalog-list
+    width 200px
+  .main-menu .secondary-menu
+    left 200px
+  .main-catalog-list > li > a
+    padding 14px
+
+@media screen and (max-width 790px)
+  .popular-items .item:nth-child(5n+1)
+    clear none
+    margin-left 2%
+  .popular-items .item:nth-child(4n+1)
+    clear: none
+    margin-left: 2%
+  .popular-items .item:nth-child(3n+1)
+    clear left
+    margin-left 0
+  .popular-items .item
+    width 32%
+  .popular-items .item-footer .top .price a,
+  .popular-items .item-footer .top .add-to-cart a
+    margin 0
+  .popular-items .item-footer .top .price,
+  .popular-items .item-footer .top .add-to-cart
+    width auto
+  .popular-items .item-footer .top
+    height 40px
+  .popular-items .item
+    height 520px
+  .main-carousel article p
+    font-size 15px
+  .company-story article:after
+    right -25%
+    width 600px
+    height 600px
+    margin-top -350px
+    background-size cover
+@media screen and (max-width 768px)
+  .main-menu
+    .wrapper
+      width 100%
+  .upper-level-menu
+    display block
+    height auto
+    border-bottom none
+    border-top: 1px solid #bebfb5
+    .main-catalog
+      display block
+      > a
+        text-align left
+        border-bottom: 1px solid #bebfb5
+        position relative
+        font-size 15px
+        padding 10px 2%
+        &:after
+          content ''
+          position absolute
+          right 2%
+          top 50%
+          background: url('../images/sprite.png') no-repeat -213px -49px;
+          width: 8px;
+          height: 14px;
+          margin-top -(@height/2)
+          anim(transform, .25s)
+        &:hover
+          font-weight 700
+          background-color $green
+          &:after
+            background-position -249px -49px
+      .main-catalog-list
+        position static
+        display none
+        height auto
+        box-shadow none
+        width 100%
+        background-color #fff
+        anim(height, .25s)
+      .main-catalog-list > li > a
+        padding-left 40px
+        font-size 14px
+        color $black
+        border-top none
+        border-bottom 1px solid #bebfb5
+        &:after
+          display none
+        &:hover
+          background-color $green
+          color #fff
+    .main-catalog.show
+      > a
+        font-weight: 700;
+        background-color: #67d6b8;
+        border-bottom 1px solid $green
+        &:after
+          transform rotate(90deg)
+          background-position -249px -49px
+      .main-catalog-list
+        display block
+  .secondary-menu,
+  .main-catalog.opened-menu:after,
+  .main-catalog.opened-menu:before
+    display none !important
+
+@media screen and (max-width 740px)
+  footer,
+  .top-footer
+    height auto
+    clearfix()
+    text-align center
+  .container:after
+    display none
+  .container
+    margin-bottom 0
+  .top-footer .menu, .top-footer .contacts, .top-footer .rss-form, .top-footer .socials
+    width 100%
+  footer
+    .callback, .menu, .rss-form
+      margin-bottom 30px
+    .top-footer .socials
+      text-align center
+    .top-footer .socials ul li
+      float none
+      display inline-block
+      margin-top 10px
+      margin-bottom 20px
+  .main-carousel
+    display none !important
+  .main-categories
+    margin-top 4%
+  .main-categories .item
+    width 49%
+    height 32%
+    margin-right 0
+    margin-left 2%
+    background-position: 50% 100%
+    &:nth-child(2n+1)
+      margin-left 0
+      clear left
+    .title
+      padding 15px
+  .popular-items .item:nth-child(3n+1)
+    clear none
+    margin-left 2%
+  .popular-items .item:nth-child(2n+1)
+    clear left
+    margin-left 0
+  .popular-items .item
+    width 48%
+    margin-left 4%
+  .popular-items
+    .item
+      &:hover
+        &:after
+          content ''
+          width 104%
+          height 20px
+          top -2%
+          position absolute
+          left -2%
+          border 3px solid $green
+          border-bottom none
+          z-index 20
+        .image
+          border-color #fff
+        .item-wrapper
+          width 104%
+          left -2%
+          top 0
+          padding 0 2%
+          border none
+          border-bottom 3px solid $green
+          &:after,
+          &:before
+            content ''
+            position absolute
+            top 0
+            width 3px
+            height 100%
+            background-color $green
+          &:before
+            left 0
+          &:after
+            right 0
+  .popular-items .hidden-details .colors .list li:nth-child(4n),
+  .popular-items .hidden-details .sizes .list li:nth-child(4n)
+    margin-right 10px
+  .brands .item
+    width 23%
+    margin-right 0
+    margin-left 2%
+    padding-right 10px
+  .brands .item:nth-child(5n+1)
+    margin-left: 2%
+    clear: none
+  .brands .item:nth-child(4n+1)
+    margin-left: 0
+    clear: left
+  .company-story
+    padding 50px 0
+  .company-story article:after
+    display none
+  .company-story article
+    width 100%
+
+@media screen and (max-width 568px)
+  .shares .item .image,
+  .news .item .image
+    height auto
+    img
+      width 100%
+      height auto
+  .brands
+    display none
+@media screen and (max-width 460px)
+  .main-categories
+    height auto
+  .main-categories .item
+      width: 100%;
+      height: 200px
+      margin-right: 0;
+      margin-left: 0;
+      background-position: 50% 100%;
+      margin-bottom 2%
+  .popular-items .item
+    width 100% !important
+    margin-left 0 !important
+  .bottom-header .contacts .tel
+    display none
+  .popular-items .hide
+    display none
+@media screen and (max-width 380px)
+  .top-footer .menu > ul
+    width 100%
+  .bottom-footer
+    height auto
+    line-height 1.2
+    .copyright
+      padding 10px 0
+
+
+
+
