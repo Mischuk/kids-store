@@ -13,7 +13,20 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,300italic,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <div class="container">
+  <div class="container opened-submenu">
+    <!-- Callback modal form -->
+    <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+      <div class="header">
+        <h2>Заказать звонок</h2>
+        <div class="small">Заполните поля ниже и в ближайшее время наш менеджер свяжется с Вами.</div>
+        <form action="">
+          <input type="text" name="username" value="" placeholder="Ваше имя">
+          <input type="text" name="usertel" value="" class="tel-mask" placeholder="Телефон">
+          <input type="submit" value="Отправить">
+        </form>
+      </div>
+    </div>
+    <!-- Header -->
     <header>
       <a class="menu-trigger burger" href="#">
         <div class="burger-icon">
@@ -58,7 +71,7 @@
               <a href="#" type="email">info@clothes-things.com</a>
             </div>
             <div class="callback">
-              <a href="#">
+              <a class="popup-with-move-anim" href="#small-dialog">
                 <i class="icon"></i>
                 <span>Заказать звонок</span>
               </a>
@@ -84,10 +97,10 @@
         <div class="wrapper">
           <ul class="upper-level-menu">
             <li class="main-catalog">
-              <a href="#">Одежда и обувь</a>
+              <a href="/"><span class="title-link">Одежда и обувь</span><span class="title-accordion"></span></a>
               <ul class="main-catalog-list">
-                <li>
-                  <a href="#">Для новорожденных</a>
+                <li class="opened">
+                  <a href="/">Для новорожденных</a>
                   <div class="secondary-menu">
                     <div class="sub-category">
                       <div class="col col-menu">
@@ -127,7 +140,7 @@
                   </div>
                 </li>
                 <li>
-                  <a href="#">Для девочек</a>
+                  <a href="/">Для девочек</a>
                   <div class="secondary-menu">
                     <div class="sub-category">
                       <div class="col col-menu">
@@ -162,7 +175,7 @@
                   </div>
                 </li>
                 <li>
-                  <a href="#">Для мальчиков</a>
+                  <a href="/">Для мальчиков</a>
                   <div class="secondary-menu">
                     <div class="sub-category">
                       <div class="col col-menu">
@@ -202,7 +215,7 @@
                   </div>
                 </li>
                 <li>
-                  <a href="#">Для девушек</a>
+                  <a href="/">Для девушек</a>
                   <div class="secondary-menu">
                     <div class="sub-category">
                       <div class="col col-menu">
@@ -237,7 +250,7 @@
                   </div>
                 </li>
                 <li>
-                  <a href="#">Для юношей</a>
+                  <a href="/">Для юношей</a>
                   <div class="secondary-menu">
                     <div class="sub-category">
                       <div class="col col-menu">
@@ -508,7 +521,7 @@
                       <a href="#" title="Добавить в корзину"></a>
                     </div>
                   </div>
-                  <div class="bottom">
+                  <div class="bottom hover">
                     <div class="counter">
                       <form method="post" action="">
                           <button class="plus">+</button>
@@ -577,7 +590,7 @@
                       <a href="#" title="Добавить в корзину"></a>
                     </div>
                   </div>
-                  <div class="bottom">
+                  <div class="bottom hover">
                     <div class="counter">
                       <form method="post" action="">
                           <button class="plus">+</button>
@@ -646,7 +659,7 @@
                       <a href="#" title="Добавить в корзину"></a>
                     </div>
                   </div>
-                  <div class="bottom">
+                  <div class="bottom hover">
                     <div class="counter">
                       <form method="post" action="">
                           <button class="plus">+</button>
@@ -715,7 +728,7 @@
                       <a href="#" title="Добавить в корзину"></a>
                     </div>
                   </div>
-                  <div class="bottom">
+                  <div class="bottom hover">
                     <div class="counter">
                       <form method="post" action="">
                           <button class="plus">+</button>
@@ -784,7 +797,7 @@
                       <a href="#" title="Добавить в корзину"></a>
                     </div>
                   </div>
-                  <div class="bottom">
+                  <div class="bottom hover">
                     <div class="counter">
                       <form method="post" action="">
                           <button class="plus">+</button>
@@ -853,7 +866,7 @@
                       <a href="#" title="Добавить в корзину"></a>
                     </div>
                   </div>
-                  <div class="bottom">
+                  <div class="bottom hover">
                     <div class="counter">
                       <form method="post" action="">
                           <button class="plus">+</button>
@@ -922,7 +935,7 @@
                       <a href="#" title="Добавить в корзину"></a>
                     </div>
                   </div>
-                  <div class="bottom">
+                  <div class="bottom hover">
                     <div class="counter">
                       <form method="post" action="">
                           <button class="plus">+</button>
@@ -991,7 +1004,7 @@
                       <a href="#" title="Добавить в корзину"></a>
                     </div>
                   </div>
-                  <div class="bottom">
+                  <div class="bottom hover">
                     <div class="counter">
                       <form method="post" action="">
                           <button class="plus">+</button>
@@ -1060,7 +1073,7 @@
                       <a href="#" title="Добавить в корзину"></a>
                     </div>
                   </div>
-                  <div class="bottom">
+                  <div class="bottom hover">
                     <div class="counter">
                       <form method="post" action="">
                           <button class="plus">+</button>
@@ -1172,12 +1185,12 @@
       <div class="wrapper">
         <h2 class="headling">Бренды</h2>
         <div class="items-list">
-          <div class="item">77 kids</div>
-          <div class="item">Alice Pi</div>
-          <div class="item">BodeBo BodeBo2</div>
-          <div class="item">El Tempo</div>
-          <div class="item">Imps+Elfs</div>
-          <div class="item">Shampoodle Stillini</div>
+          <div class="item"><span class="letter">7</span>77 kids</div>
+          <div class="item"><span class="letter">A</span>Alice Pi</div>
+          <div class="item"><span class="letter">B</span>BodeBo BodeBo2</div>
+          <div class="item"><span class="letter">E</span>El Tempo</div>
+          <div class="item"><span class="letter">I</span>Imps+Elfs</div>
+          <div class="item"><span class="letter">S</span>Shampoodle Stillini</div>
         </div>
       </div>
     </div>

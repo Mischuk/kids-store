@@ -207,3 +207,136 @@ i.icon
   display none
   z-index 20
 
+/* Modals */
+/* Dark ovelay, start state */
+.my-mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+/* animate in */
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+/* animate out */
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+
+
+/**
+ * Fade-move animation for second dialog
+ */
+
+/* at start */
+.my-mfp-slide-bottom .zoom-anim-dialog {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+
+  -webkit-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+  -moz-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+  -ms-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+  -o-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+  transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+
+}
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
+  opacity: 1;
+  -webkit-transform: translateY(0) perspective( 600px ) rotateX( 0 );
+  -moz-transform: translateY(0) perspective( 600px ) rotateX( 0 );
+  -ms-transform: translateY(0) perspective( 600px ) rotateX( 0 );
+  -o-transform: translateY(0) perspective( 600px ) rotateX( 0 );
+  transform: translateY(0) perspective( 600px ) rotateX( 0 );
+}
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
+  opacity: 0;
+
+  -webkit-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+  -moz-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+  -ms-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+  -o-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+  transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+}
+
+/* Dark overlay, start state */
+.my-mfp-slide-bottom.mfp-bg {
+  opacity: 0;
+
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready.mfp-bg {
+  opacity: 0.5;
+}
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+#small-dialog
+  background: white;
+  padding: 35px;
+  text-align: left;
+  max-width: 400px;
+  margin: 40px auto;
+  position: relative;
+  .mfp-close
+    light()
+    font-size 42px
+    font-family 'Open Sans'
+  .header
+    h2
+      position relative
+      font-size 24px
+      line-height 1
+      padding-bottom 25px
+      margin-bottom 25px
+      &:after
+        content ''
+        height 3px
+        width 75px
+        background-color $green
+        position absolute
+        left 0
+        bottom 0
+    .small
+      margin-bottom 25px
+      light()
+      cursor default
+      font-size 16px
+  form
+    clearfix()
+  input[type="text"]
+    height 40px
+    width 100%
+    margin-bottom 10px
+    border 1px solid $green
+    padding-left 20px
+    padding-right 20px
+    light()
+    font-size 16px
+    &:focus
+      border-width 3px
+  input[type="submit"]
+    float right
+    width 160px
+    height 40px
+    line-height 40px
+    background-color $green
+    border none
+    color #fff
+    font-size 16px
+    text-transform uppercase
