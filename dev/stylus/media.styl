@@ -83,19 +83,17 @@
       margin-bottom 2%
     .category-3
       height 66%
-
-  .popular-items
+  .main-items
     .item
-      width 23%
+      width 32%
       margin-left 2%
       margin-bottom 2%
-      &:nth-child(5n+1)
-        margin-left 2%
-        float left
-        clear none
       &:nth-child(4n+1)
-        clear left
-        margin-left 0
+        clear none !important
+        margin-left 2% !important
+      &:nth-child(3n+1)
+        clear left !important
+        margin-left 0 !important
       &:hover
         &:after
           content ''
@@ -126,6 +124,21 @@
             left 0
           &:after
             right 0
+  .popular-items
+    .item
+      width 23.5%
+      margin-left 2%
+      margin-bottom 2%
+      &:nth-child(5n+1)
+        margin-left 2%
+        float left
+        clear none
+      &:nth-child(3n+1)
+        clear none !important
+        margin-left 2% !important
+      &:nth-child(4n+1)
+        clear left
+        margin-left 0 !important
   .company-story article:after
     right -25%
   .top-footer
@@ -161,6 +174,70 @@
             &:nth-child(5n+1)
               margin-left 0
               clear left
+  .main
+    .sidebar
+      width 25%
+    .content
+      width 73%
+  .styledSelect,
+  .select
+    width 170px
+  .styledSelect:after
+    right -10px
+  .profile-item
+    .gallery
+      width 40%
+    .details
+      width 60%
+    .lead-profile-image-thumb a
+      width 23.5%
+      margin-left 2%
+      margin-bottom 2%
+  .profile-item .tabs-info .tabs-content .tables table
+    width 45%
+  .profile-item .tabs-info .tabs-content .tables table:first-child
+    margin-right 5%
+  .profile-item .details .footer .prices
+    display none
+  .profile-item .details .footer .compare,
+  .profile-item .details .footer .favourite,
+  .profile-item .details .footer .fast-buy
+    width 32%
+  .profile-item .details .footer .compare,
+  .profile-item .details .footer .favourite
+    margin-right 2%
+  .filtred-items
+    .items-list.view-list
+      .item
+        height auto
+        .image, .hidden-details
+          width 25%
+        .description
+          width 50%
+          position static
+          padding-bottom 100px
+          clearfix()
+          .item-footer
+            width 50%
+            left 25%
+            padding-left 30px
+            box-shadow none
+            padding-right 30px
+        .item-wrapper
+            border none !important
+        &:hover
+          &:after
+            display none !important
+  .main-items .hidden-details .colors .list li,
+  .main-items .hidden-details .sizes .list li,
+  .main-items .hidden-details .colors .list li:nth-child(4n),
+  .main-items .hidden-details .sizes .list li:nth-child(4n)
+    margin-left 10px
+    margin-right 0
+  .main-items .hidden-details .colors .list li:nth-child(3n+1),
+  .main-items .hidden-details .sizes .list li:nth-child(3n+1)
+    margin-left 0
+    clear left
 @media screen and (max-width: 960px)
   .top-header a
     padding 0 5px
@@ -172,7 +249,7 @@
     top 42px
     width 320px
     background-color $brown
-    z-index 20
+    z-index 25
     padding-top 30px
     box-shadow 0 0 3px 1px rgba(0,0,0,.35)
     transform translateX(-110%)
@@ -282,7 +359,7 @@
   .bottom-header .user-cart
     margin-top 0
     position absolute
-    right 0
+    right 2%
     top 0
   .bottom-header .user-cart .cart span
     display none
@@ -324,6 +401,77 @@
   .bottom-header .logo
     top 90px
     margin-top 0
+  .category-lead .image
+    width 220px
+  .profile-item .details .footer .favourite
+    margin-right 0
+  .profile-item .details .footer .compare,
+  .profile-item .details .footer .favourite,
+  .profile-item .details .footer .fast-buy
+    width 49%
+    margin-bottom 2%
+  .profile-item
+    .tabs-info
+      clearfix()
+      .tabs-nav
+        width 25%
+        float left
+        border 1px solid #bebfb5
+        li
+          width 100%
+          a.current
+            border none
+            span
+              border-color #fff
+              color $green
+          a
+            border none
+            span
+              line-height 15px
+      .tabs-content
+        width 75%
+        position relative
+        left -1px
+        float left
+        border-top 1px solid #bebfb5
+        .tables table
+          width 100%
+          margin-right 0
+          margin-bottom 0
+  .top-sales, .viewed-items
+    .item
+      height 445px !important
+      &:last-child
+        display none
+      .price
+        text-align left !important
+      .item-footer .top .add-to-cart a
+        margin 10px 0 !important
+  .filtred-items .header .options .change-view
+    display none
+  .filtred-items .header .options
+    margin-right 10px
+  .select-options
+    right -10px
+    left auto
+@media screen and (max-width 920px)
+  .main-items .item-footer .price,
+  .main-items .item-footer .add-to-cart
+    width 100%
+    text-align center
+    a
+      margin 10px auto
+  .main-items .item-footer .top
+    height 90px
+  .main-items .item
+    height 570px
+  .sidebar-filters .price .price-inputs input
+    width 45%
+    padding 0 5px
+    &:last-child
+      margin-left 10%
+  .popular-items .item-footer .top .add-to-cart a
+    margin 10px auto
 @media screen and (max-width 840px)
   .main-catalog-list
     width 200px
@@ -331,17 +479,27 @@
     left 200px
   .main-catalog-list > li > a
     padding 14px
-
+  .profile-item .details .footer .top
+    position relative
+  .profile-item .details .footer .add-to-cart
+    position absolute
+    right 0
+    bottom -120px
+    width 49%
+  .profile-item .details .footer .main-price
+    text-align right
+  .group-items
+    display none
 @media screen and (max-width 790px)
   .popular-items .item:nth-child(5n+1)
-    clear none
-    margin-left 2%
+    clear none !important
+    margin-left 2% !important
   .popular-items .item:nth-child(4n+1)
-    clear: none
-    margin-left: 2%
+    clear: none !important
+    margin-left: 2% !important
   .popular-items .item:nth-child(3n+1)
-    clear left
-    margin-left 0
+    clear left !important
+    margin-left 0 !important
   .popular-items .item
     width 32%
   .popular-items .item-footer .top .price a,
@@ -362,6 +520,11 @@
     height 600px
     margin-top -350px
     background-size cover
+  .popular-items .item-footer .top .price
+    text-align left
+  .top-sales, .viewed-items
+    .item:nth-child(4)
+      display none
 @media screen and (max-width 768px)
   .main-menu
     .wrapper
@@ -446,14 +609,174 @@
   .content-carousel
     .owl-prev, .owl-next
       display block !important
+      height 26px
+      width 16px
     .owl-controls
       position static
     .owl-nav
-      height 47px
-      width 100px
       position absolute
       right 0
-      top -55px
+      width 50px
+      top -13px
+      .owl-prev
+        background: url('../images/sprite.png') no-repeat -117px -4px;
+        right 20px
+        &:hover
+          background-position -156px -4px;
+      .owl-next
+        background-position -178px -4px
+        right 0
+        &:hover
+          background-position -138px -4px
+  .bottom-header .logo
+    top 135px
+  .main
+    position static
+    .breadcrumbs
+      position absolute
+      left 2%
+      width 98%
+      top 235px
+    .sidebar, .content
+      width 100%
+  .accordion.categories
+    display none
+  .sidebar-filters section
+    height 0
+    overflow hidden
+    margin-bottom 0 !important
+  .sidebar-filters .hide section
+    height auto
+    overflow visible
+    margin-bottom 15px !important
+  .sidebar-filters .buttons
+    display none
+  .sidebar-filters .buttons a
+    width 220px
+    margin-right 30px
+  .sidebar-filters
+    top 55px
+    margin-bottom 2%
+    position relative
+  .main-catalog-list
+    li.opened
+      > a
+        position relative
+        &:before
+          content ''
+          background: url('../images/sprite.png') no-repeat -213px -49px;
+          width: 8px;
+          height: 14px;
+          position absolute
+          right 20px
+          top 50%
+          margin-top -(@height/2)
+          anim(transform, .25s)
+        &:hover
+          &:before
+            background-position -249px -49px
+        .title-link-inner
+          position: relative;
+          display: inline-block;
+          height: 100%;
+          z-index: 10;
+        .title-accordion-inner
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 10;
+      &:first-child > a
+        border-top: 1px solid #fff;
+      &.open-sub-sub-menu
+        > a
+          background-color $green
+          color $black
+          border-bottom-color #fff
+          &:before
+            background-position -249px -49px
+            transform rotate(90deg)
+        .secondary-menu
+          display block !important
+    .secondary-menu
+      width 100% !important
+      box-shadow none
+      height auto
+      border none
+      position static
+      display none !important
+      .sub-category
+        padding 10px 0
+        border-bottom: 1px solid #bebfb5;
+      .col-category
+        display none !important
+      .col
+        width 100%
+        padding-bottom 0
+        padding-top 0
+        a
+          padding-left 60px
+  .main-menu.tabled,
+  .sidebar-filters
+    display none
+  .mobile-menu-buttons
+    position absolute
+    top 42px
+    width 100%
+    text-align right
+    right 0
+    height 60px
+    background-color $brown
+    a
+      display inline-block
+      width 220px
+      height 40px
+      line-height 40px
+      margin-top 10px
+      background-color #a39f9e
+      color #fff
+      border 1px solid #a39f9e
+      text-align center
+      text-transform uppercase
+      &.active
+        background-color #a39f9e - 25%
+        box-shadow inset 0 0 5px 2px rgba(163, 159, 158, .45)
+        color #fff
+  .sidebar
+    .mobile-menu-buttons
+      right auto
+      left 0
+      text-align right
+      a
+        margin-right 245px
+  .mobile-menu-show-categories
+    z-index 20
+    position relative
+    margin-right 2%
+
+  .main-menu
+    display none
+  .content
+    padding-top 55px
+  .main-menu
+    margin-bottom 20px
+  .pager
+    margin-top 35px
+  .bottom-header
+    height 200px
+  .main-menu,
+  .sidebar-filters
+    position absolute
+    left 0
+    width 100%
+    top 102px
+    z-index 19
+    background-color #fff
+    box-shadow 0 4px 10px 0px rgba(0,0,0,.5)
+  .profile-item .lead-profile-image-thumb a
+    height 65px
+    line-height 59px
 @media screen and (max-width 740px)
   footer,
   .top-footer
@@ -491,16 +814,17 @@
       clear left
     .title
       padding 15px
-  .popular-items .item:nth-child(3n+1)
-    clear none
-    margin-left 2%
-  .popular-items .item:nth-child(2n+1)
-    clear left
-    margin-left 0
-  .popular-items .item
+
+  .main-items .item:nth-child(3n+1)
+    clear none !important
+    margin-left 4% !important
+  .main-items .item:nth-child(2n+1)
+    clear left !important
+    margin-left 0 !important
+  .main-items .item
     width 48%
     margin-left 4%
-  .popular-items
+  .main-items
     .item
       &:hover
         &:after
@@ -534,8 +858,8 @@
             left 0
           &:after
             right 0
-  .popular-items .hidden-details .colors .list li:nth-child(4n),
-  .popular-items .hidden-details .sizes .list li:nth-child(4n)
+  .main-items .hidden-details .colors .list li:nth-child(4n),
+  .main-items .hidden-details .sizes .list li:nth-child(4n)
     margin-right 10px
   .brands .item
     width 23%
@@ -554,7 +878,75 @@
     display none
   .company-story article
     width 100%
-
+  .main-items .item
+    height 545px
+  .pager
+    margin-top 75px
+  .category-lead
+    display block
+    height auto
+    .image,
+    .text
+      display block
+  .category-lead .text h2
+    padding-top 10px
+    padding-bottom 0
+  .popular-items .item
+    height 520px
+  .popular-items .item:nth-child(5n+1)
+    margin-left 4% !important
+  .popular-items .item:nth-child(2n+1)
+    margin-left 0% !important
+  .top-sales, .viewed-items
+    display none
+  .profile-item .details .availability .no-availability .status
+    display block
+  .profile-item .details .title
+    display block
+    padding-bottom 10px
+  .profile-item .details
+    width 50%
+  .profile-item .gallery
+    width 50%
+  .profile-item .details .footer .compare,
+  .profile-item .details .footer .favourite,
+  .profile-item .details .footer .fast-buy
+    width 100%
+    margin-right 0
+    margin-left 0
+  .profile-item .details .footer .bottom
+    padding-top 30px
+  .profile-item .details .header
+    margin-bottom 15px
+  .profile-item .details .colors
+    margin-top 20px
+    margin-bottom 20px
+  .profile-item .details .sizes
+    margin-bottom 20px
+  .profile-item .details .footer .top
+    display block
+    padding 10px
+    height auto
+    .counter
+      display block
+      margin 0 auto
+      float none
+      width 70px
+      height 35px
+    .main-price
+      display block
+      text-align center
+      width 100%
+      padding 5px 0
+  .profile-item .details .footer .add-to-cart
+    width 100%
+    top 95px
+  .filtred-items .header .total
+    width 100%
+  .filtred-items .header .options
+    margin-right 4%
+    margin-top 20px
+    margin-bottom 20px
 @media screen and (max-width 568px)
   .shares .item .image,
   .news .item .image
@@ -564,6 +956,34 @@
       height auto
   .brands
     display none
+  .pager ul li
+    margin-bottom 10px
+  .profile-item .details .colors > div
+    margin-bottom 5px
+    margin-right 5px
+    margin-left 0
+  .profile-item .tabs-info .tabs-nav li a
+    padding 0 10px
+  .profile-item .tabs-info .tabs-content
+    padding 10px
+  .mobile-menu-buttons a
+    width 45%
+  .sidebar .mobile-menu-buttons
+    text-align left
+  .mobile-menu-show-filters
+    margin-right 0
+    margin-left 2%
+  .sidebar .mobile-menu-buttons a
+    margin-right 0
+  .pager
+    text-align center
+  .pager ul li:last-child a, .pager ul li:first-child a
+    width 95px
+  .pager ul li a,
+  .pager ul li span
+    width 30px
+    height 30px
+    line-height 28px
 @media screen and (max-width 460px)
   .main-categories
     height auto
@@ -574,12 +994,12 @@
       margin-left: 0;
       background-position: 50% 100%;
       margin-bottom 2%
-  .popular-items .item
-    width 100% !important
-    margin-left 0 !important
+  .main-items .item
+    width 96% !important
+    margin-left 2% !important
   .bottom-header .contacts .tel
     width 100%
-    height 100%
+    height 42px
     line-height 32px
     right 0
     text-align center
@@ -588,7 +1008,53 @@
       font-size 20px
   .popular-items .hide
     display none
-
+  .container .main-items .item
+    margin-left 2% !important
+    margin-bottom 8%
+  .filtred-items .header .options .sort,
+  .filtred-items .header .options .change-view,
+  .filtred-items .header .options
+    width 100%
+  .filtred-items .header .options .sort
+    padding-left 2%
+  .filtred-items .header .options .change-view,
+  .category-lead
+    display none
+  .sidebar .mobile-menu-buttons
+    right auto
+    left 0
+    text-align left
+  .mobile-menu-buttons a
+    font-size 13px
+  .mobile-menu-show-categories
+    position relative
+    z-index 20
+  .main-items .item-footer .top
+    height 40px
+  .main-items .item-footer .top .price,
+  .main-items .item-footer .top .add-to-cart
+    width auto
+  .main-items .item-footer .top .price
+    text-align left
+  .main-items .item
+    height 495px
+  .main-items
+    padding-top 20px
+  .profile-item .tabs-info .tabs-nav
+    width 35%
+  .profile-item .tabs-info .tabs-content
+    width 65%
+  .profile-item .tabs-info .tabs-content .tables table td
+    line-height 1
+    padding 5px
+    display block
+  .profile-item .tabs-info .tabs-content p
+    padding 20px 0
+@media screen and (max-width 420px)
+  .profile-item .gallery,
+  .profile-item .details
+    width 100%
+    padding-left 0
 @media screen and (max-width 380px)
   .top-footer .menu > ul
     width 100%
@@ -597,6 +1063,16 @@
     line-height 1.2
     .copyright
       padding 10px 0
+  .category-lead
+    display none
+  .mobile-menu-buttons a
+    font-size 11px
+  .pager ul li:last-child,
+  .pager ul li:first-child
+    display none
+  .pager
+    margin-top 15px
+    margin-bottom 20px
 @media screen and (max-width 320px)
   .bottom-header .contacts .tel
     font-size 18px

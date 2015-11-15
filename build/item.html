@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Карточка товара</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,300italic,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div class="container opened-submenu">
+    <!-- Callback modal form -->
+    <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+      <div class="header">
+        <h2>Заказать звонок</h2>
+        <div class="small">Заполните поля ниже и в ближайшее время наш менеджер свяжется с Вами.</div>
+        <form action="">
+          <input type="text" name="username" value="" placeholder="Ваше имя">
+          <input type="text" name="usertel" value="" class="tel-mask" placeholder="Телефон">
+          <input type="submit" value="Отправить">
+        </form>
+      </div>
+    </div>
+    <!-- Header -->
+    <header>
+      <a class="menu-trigger burger" href="#">
+        <div class="burger-icon">
+          <span></span>
+        </div>
+      </a>
+      <div class="top-header">
+        <div class="wrapper">
+          <div class="mobile-menu">
+            <nav class="menu">
+              <ul>
+                <li><a href="#">О магазине</a></li>
+                <li><a href="#">Как купить</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Оплата</a></li>
+                <li><a href="#">Гарантии</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+            <div class="main-search">
+              <form>
+                <input type="text" placeholder="" class="inp-text">
+                <input type="submit" value="" class="inp-submit">
+              </form>
+            </div>
+            <div class="user-authorization">
+              <div class="signin"><a href="#">Вход</a></div>
+              <div class="signup"><a href="#">Регистрация</a></div>
+            </div>
+          </div>
+    
+    
+        </div>
+      </div>
+    
+      <div class="bottom-header">
+        <div class="wrapper">
+          <div class="contacts">
+            <div class="tel"><a href="#">(065) <span>26 56 415</span></a></div>
+            <div class="email">
+              <a href="#" type="email">info@clothes-things.com</a>
+            </div>
+            <div class="callback">
+              <a class="popup-with-move-anim" href="#small-dialog">
+                <i class="icon"></i>
+                <span>Заказать звонок</span>
+              </a>
+            </div>
+          </div>
+          <div class="logo"><a href="#"></a></div>
+          <div class="user-cart">
+            <div class="cart">
+              <a href="#">
+                <i class="icon"></i>
+                <span>Корзина</span>
+              </a>
+            </div>
+            <div class="cart-details">
+              <div class="total-items">Товаров: <span>0</span> шт.</div>
+              <div class="total-summ">На сумму: <span>0,0 руб.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="main-menu">
+        <div class="wrapper">
+          <ul class="upper-level-menu">
+            <li class="main-catalog">
+              <a href="/"><span class="title-link">Одежда и обувь</span><span class="title-accordion"></span></a>
+              <ul class="main-catalog-list">
+                <li class="opened">
+                  <a href="/"><span class="title-link-inner">Для новорожденных</span><span class="title-accordion-inner"></span></a>
+                  <div class="secondary-menu">
+                    <div class="sub-category">
+                      <div class="col col-menu">
+                        <ul>
+                          <li><a href="#">Белье, носки, колготки</a></li>
+                          <li><a href="#">Блузки, туники</a></li>
+                          <li><a href="#">Брюки</a></li>
+                          <li><a href="#">Верхняя одежда</a></li>
+                          <li><a href="#">Водолазки, лонгсливы</a></li>
+                          <li><a href="#">Джинсы</a></li>
+                          <li><a href="#">Комбинезоны, костюмы</a></li>
+                          <li><a href="#">Кофты, жакеты</a></li>
+                          <li><a href="#">Купальники</a></li>
+                          <li><a href="#">Одежда для дома</a></li>
+                        </ul>
+                      </div>
+                      <div class="col col-menu">
+                        <ul>
+                          <li><a href="#">Одежда для дома</a></li>
+                          <li><a href="#">Платья</a></li>
+                          <li><a href="#">Пуловеры, джемперы</a></li>
+                          <li><a href="#">Сапоги</a></li>
+                          <li><a href="#">Свитшоты, толстовки</a></li>
+                          <li><a href="#">Топы</a></li>
+                          <li><a href="#">Туфли</a></li>
+                          <li><a href="#">Футболки</a></li>
+                          <li><a href="#">Шорты, бермуды</a></li>
+                          <li><a href="#">Юбки</a></li>
+                        </ul>
+                      </div>
+                      <div class="col col-category">
+                        <div class="icon icon-clothes-shoes"><img src="images/menu-categories/clothes-shoes.png" width="150" height="140" alt=""></div>
+                        <div class="icon-category-title">ОДЕЖДА И ОБУВЬ</div>
+                        <div class="icon-category-link"><a href="#" class="green-border-button">Перейти</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="/">Для девочек</a>
+                  <div class="secondary-menu">
+                    <div class="sub-category">
+                      <div class="col col-menu">
+                        <ul>
+                          <li><a href="#">Одежда для дома</a></li>
+                          <li><a href="#">Платья</a></li>
+                          <li><a href="#">Пуловеры, джемперы</a></li>
+                          <li><a href="#">Сапоги</a></li>
+                          <li><a href="#">Свитшоты, толстовки</a></li>
+                          <li><a href="#">Топы</a></li>
+                          <li><a href="#">Туфли</a></li>
+                          <li><a href="#">Футболки</a></li>
+                          <li><a href="#">Шорты, бермуды</a></li>
+                          <li><a href="#">Юбки</a></li>
+                        </ul>
+                      </div>
+                      <div class="col col-menu">
+                        <ul>
+                          <li><a href="#">Белье, носки, колготки</a></li>
+                          <li><a href="#">Блузки, туники</a></li>
+                          <li><a href="#">Брюки</a></li>
+                          <li><a href="#">Верхняя одежда</a></li>
+                          <li><a href="#">Водолазки, лонгсливы</a></li>
+                        </ul>
+                      </div>
+                      <div class="col col-category">
+                        <div class="icon icon-clothes-shoes"><img src="images/menu-categories/clothes-shoes.png" width="150" height="140" alt=""></div>
+                        <div class="icon-category-title">ОДЕЖДА И ОБУВЬ</div>
+                        <div class="icon-category-link"><a href="#" class="green-border-button">Перейти</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="/">Для мальчиков</a>
+                  <div class="secondary-menu">
+                    <div class="sub-category">
+                      <div class="col col-menu">
+                        <ul>
+                          <li><a href="#">Белье, носки, колготки</a></li>
+                          <li><a href="#">Блузки, туники</a></li>
+                          <li><a href="#">Брюки</a></li>
+                          <li><a href="#">Верхняя одежда</a></li>
+                          <li><a href="#">Водолазки, лонгсливы</a></li>
+                          <li><a href="#">Джинсы</a></li>
+                          <li><a href="#">Комбинезоны, костюмы</a></li>
+                          <li><a href="#">Кофты, жакеты</a></li>
+                          <li><a href="#">Купальники</a></li>
+                          <li><a href="#">Одежда для дома</a></li>
+                        </ul>
+                      </div>
+                      <div class="col col-menu">
+                        <ul>
+                          <li><a href="#">Одежда для дома</a></li>
+                          <li><a href="#">Платья</a></li>
+                          <li><a href="#">Пуловеры, джемперы</a></li>
+                          <li><a href="#">Сапоги</a></li>
+                          <li><a href="#">Свитшоты, толстовки</a></li>
+                          <li><a href="#">Топы</a></li>
+                          <li><a href="#">Туфли</a></li>
+                          <li><a href="#">Футболки</a></li>
+                          <li><a href="#">Шорты, бермуды</a></li>
+                          <li><a href="#">Юбки</a></li>
+                        </ul>
+                      </div>
+                      <div class="col col-category">
+                        <div class="icon icon-clothes-shoes"><img src="images/menu-categories/clothes-shoes.png" width="150" height="140" alt=""></div>
+                        <div class="icon-category-title">ОДЕЖДА И ОБУВЬ</div>
+                        <div class="icon-category-link"><a href="#" class="green-border-button">Перейти</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="/">Для девушек</a>
+                  <div class="secondary-menu">
+                    <div class="sub-category">
+                      <div class="col col-menu">
+                        <ul>
+                          <li><a href="#">Одежда для дома</a></li>
+                          <li><a href="#">Платья</a></li>
+                          <li><a href="#">Пуловеры, джемперы</a></li>
+                          <li><a href="#">Сапоги</a></li>
+                          <li><a href="#">Свитшоты, толстовки</a></li>
+                          <li><a href="#">Топы</a></li>
+                          <li><a href="#">Туфли</a></li>
+                          <li><a href="#">Футболки</a></li>
+                          <li><a href="#">Шорты, бермуды</a></li>
+                          <li><a href="#">Юбки</a></li>
+                        </ul>
+                      </div>
+                      <div class="col col-menu">
+                        <ul>
+                          <li><a href="#">Белье, носки, колготки</a></li>
+                          <li><a href="#">Блузки, туники</a></li>
+                          <li><a href="#">Брюки</a></li>
+                          <li><a href="#">Верхняя одежда</a></li>
+                          <li><a href="#">Водолазки, лонгсливы</a></li>
+                        </ul>
+                      </div>
+                      <div class="col col-category">
+                        <div class="icon icon-clothes-shoes"><img src="images/menu-categories/clothes-shoes.png" width="150" height="140" alt=""></div>
+                        <div class="icon-category-title">ОДЕЖДА И ОБУВЬ</div>
+                        <div class="icon-category-link"><a href="#" class="green-border-button">Перейти</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="/">Для юношей</a>
+                  <div class="secondary-menu">
+                    <div class="sub-category">
+                      <div class="col col-menu">
+                        <ul>
+                          <li><a href="#">Одежда для дома</a></li>
+                          <li><a href="#">Платья</a></li>
+                          <li><a href="#">Пуловеры, джемперы</a></li>
+                          <li><a href="#">Сапоги</a></li>
+                          <li><a href="#">Свитшоты, толстовки</a></li>
+                          <li><a href="#">Топы</a></li>
+                          <li><a href="#">Туфли</a></li>
+                          <li><a href="#">Футболки</a></li>
+                          <li><a href="#">Шорты, бермуды</a></li>
+                          <li><a href="#">Юбки</a></li>
+                        </ul>
+                      </div>
+                      <div class="col col-menu">
+                        <ul>
+                          <li><a href="#">Белье, носки, колготки</a></li>
+                          <li><a href="#">Блузки, туники</a></li>
+                          <li><a href="#">Брюки</a></li>
+                          <li><a href="#">Верхняя одежда</a></li>
+                          <li><a href="#">Водолазки, лонгсливы</a></li>
+                        </ul>
+                      </div>
+                      <div class="col col-category">
+                        <div class="icon icon-clothes-shoes"><img src="images/menu-categories/clothes-shoes.png" width="150" height="140" alt=""></div>
+                        <div class="icon-category-title">ОДЕЖДА И ОБУВЬ</div>
+                        <div class="icon-category-link"><a href="#" class="green-border-button">Перейти</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="main-catalog"><a href="#">Игрушки и игры</a></li>
+            <li class="main-catalog"><a href="#">Школа</a></li>
+            <li class="main-catalog"><a href="#">Спорт и активный отдых</a></li>
+            <li class="main-catalog"><a href="#">Аксессуары</a></li>
+            <li class="main-catalog"><a href="#">Книги</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="main wrapper">
+      <div class="mobile-menu-buttons">
+        <a href="#" class="mobile-menu-show-categories">Показать категории</a>
+      </div>
+      <div class="breadcrumbs">
+        <ul>
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Товары</a></li>
+          <li><a href="#">Одежда и обувь</a></li>
+          <li><span>Для девочек</span></li>
+        </ul>
+      </div>
+      <div class="content full">
+        <div class="profile-item">
+          <div class="item-title"><h2 class="headling small">Куртка, Lassie by Reima</h2></div>
+          <div class="gallery">
+            <div class="lead-profile-image">
+              <a class="current" href="images/content/items/1.jpg"><img src="images/content/items/1.jpg"></a>
+              <a href="images/content/items/2.jpg"><img src="images/content/items/2.jpg"></a>
+              <a href="images/content/items/3.jpg"><img src="images/content/items/3.jpg"></a>
+              <a href="images/content/items/4.jpg"><img src="images/content/items/4.jpg"></a>
+              <a href="images/content/items/5.jpg"><img src="images/content/items/5.jpg"></a>
+            </div>
+            <div class="lead-profile-image-thumb">
+              <a href="#" class="current"><img src="images/content/items/1.jpg"></a>
+              <a href="#"><img src="images/content/items/2.jpg"></a>
+              <a href="#"><img src="images/content/items/3.jpg"></a>
+              <a href="#"><img src="images/content/items/4.jpg"></a>
+              <a href="#"><img src="images/content/items/5.jpg"></a>
+            </div>
+          </div>
+          <div class="details">
+            <div class="header">
+              <div class="articul"><span class="title">Артикул:</span> EWRT345</div>
+              <div class="brand"><span class="title">Бренд:</span> <a href="#">Lassie by Relma</a></div>
+            </div>
+            <div class="availability">
+              <div class="no-availability">
+                <span class="status">НЕТ В НАЛИЧИИ</span>
+                <a href="#" class="send">Сообщить о поступлении</a>
+              </div>
+              <div class="yes-availability">
+                <span class="status">Есть в наличии</span>
+              </div>
+            </div>
+            <div class="colors">
+              <span class="title">Цвет:</span>
+              <div>
+                <input id="color-1" type="checkbox" name="colors"/>
+                <label for="color-1">
+                  <span class="color-icon" style="background: #000"></span>
+                </label>
+              </div>
+              <div>
+                <input id="color-2" type="checkbox" name="colors"/>
+                <label for="color-2">
+                  <span class="color-icon" style="background: #a6a6a6"></span>
+                </label>
+              </div>
+              <div>
+                <input id="color-3" type="checkbox" name="colors"/>
+                <label for="color-3">
+                  <span class="color-icon" style="background: #fff; border: 1px solid #d8d7d6;"></span>
+                </label>
+              </div>
+              <div>
+                <input id="color-4" type="checkbox" name="colors"/>
+                <label for="color-4">
+                  <span class="color-icon" style="background: #dd1a31"></span>
+                </label>
+              </div>
+              <div>
+                <input id="color-5" type="checkbox" name="colors"/>
+                <label for="color-5">
+                  <span class="color-icon" style="background: #ff6eaf"></span>
+                </label>
+              </div>
+            </div>
+            <div class="sizes">
+              <span class="title">Размер:</span>
+              <div>
+                <input id="size-1" type="checkbox" name="sizes"/>
+                <label for="size-1">
+                  <span class="icon">XS</span>
+                </label>
+              </div>
+              <div>
+                <input id="size-2" type="checkbox" name="sizes"/>
+                <label for="size-2">
+                  <span class="icon">XL</span>
+                </label>
+              </div>
+              <div>
+                <input id="size-3" type="checkbox" name="sizes"/>
+                <label for="size-3">
+                  <span class="icon">L</span>
+                </label>
+              </div>
+              <div>
+                <input id="size-4" type="checkbox" name="sizes"/>
+                <label for="size-4">
+                  <span class="icon">M</span>
+                </label>
+              </div>
+            </div>
+            <div class="footer">
+              <div class="top">
+                <div class="prices">
+                  <div class="old">11 890 руб.</div>
+                  <div class="current">11 690 руб.</div>
+                </div>
+                <div class="counter hover">
+                  <form method="post" action="">
+                    <button class="plus">+</button>
+                    <input type="text" value="1" class="counter-inp">
+                    <button class="minus">-</button>
+                  </form>
+                </div>
+                <div class="main-price">11 690 руб.</div>
+                <div class="add-to-cart">
+                  <a href="#" title="Добавить в корзину">В корзину</a>
+                </div>
+              </div>
+              <div class="bottom">
+                <div class="compare"><a href="#">В сравнении</a></div>
+                <div class="favourite"><a href="#">Отложить</a></div>
+                <div class="fast-buy"><a href="#">Купить в 1 клик</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="tabs-info">
+            <section>
+              <ul class="tabs-nav">
+                <li><a href="#tab-1"><span>Описание</span></a></li>
+                <li><a href="#tab-2"><span>Как купить</span></a></li>
+                <li><a href="#tab-3"><span>Доставка и Оплата</span></a></li>
+                <li><a href="#tab-4"><span>Возврат</span></a></li>
+                <li><a href="#tab-5"><span>Гарантии</span></a></li>
+                <li><a href="#tab-6"><span>Отзывы</span></a></li>
+              </ul>
+              <div class="tabs-content">
+                <div class="tabs-item" id="tab-1">
+                  <div class="table-headling">Характеристики:</div>
+                  <div class="tables">
+                    <table>
+                      <tr><td>Бренд:</td><td>Lassie by Reima</td></tr>
+                      <tr><td>Производитель:</td><td>Германия</td></tr>
+                      <tr><td>Год:</td><td>2015</td></tr>
+                      <tr><td>Коллекция:</td><td>Осень-Зима 2015</td></tr>
+                    </table>
+                    <table>
+                      <tr><td>Состав:</td><td>100% полиэстр</td></tr>
+                      <tr><td>Длина:</td><td>55 см</td></tr>
+                      <tr><td>Длина рукава:</td><td>46 см</td></tr>
+                      <tr><td>Сезон:</td><td>Зима</td></tr>
+                    </table>
+                  </div>
+                  <p>Куртка вгорох Acoola зеленого цвета выполнена из гладкого на ощупь материала, утеплитель - синтепон. Детали: два боковых кармана; застежка на молнию; съемный капюшон; флисовая подкладка.</p>
+                </div>
+                <div class="tabs-item" id="tab-2">Tab 2</div>
+                <div class="tabs-item" id="tab-3">Tab 3</div>
+                <div class="tabs-item" id="tab-4">Tab 4</div>
+                <div class="tabs-item" id="tab-5">Tab 5</div>
+                <div class="tabs-item" id="tab-6">Tab 6</div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="group-items">
+          <h2 class="headling bold green small">Вместе дешевле</h2>
+          <div class="item">
+            <div class="helper">
+              <div class="column">
+                <div class="image">
+                  <a href="#">
+                    <img src="images/content/items/1.jpg">
+                  </a>
+                </div>
+                <div class="title">
+                  <a href="#">Куртка, Lassie by Reima</a>
+                </div>
+                <div class="price">11 690 руб.</div>
+              </div>
+              <div class="plus">+</div>
+              <div class="column">
+                <div class="image">
+                  <a href="#">
+                    <img src="images/content/items-top/3.jpg">
+                  </a>
+                </div>
+                <div class="title">
+                  <a href="#">Кофта, Lassie by Reima</a>
+                </div>
+                <div class="price">5 200 руб.</div>
+              </div>
+              <div class="equal">=</div>
+              <div class="total">
+                <div class="old">00 000 руб.</div>
+                <div class="current">00 000 руб.</div>
+                <div class="economy">Вы экономите 0 руб.</div>
+                <div class="add-to-cart">
+                  <a href="#">Купить комплект</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="top-sales popular-items main-items">
+          <h2 class="headling small">Лидеры продаж</h2>
+          <div class="items-list">
+            <div class="item">
+              <div class="item-wrapper">
+                <div class="image">
+                  <a href="#"><img src="images/content/items-top/1.jpg"></a>
+                </div>
+                <div class="description">
+                  <div class="title"><a href="#">Куртка, Lassie by Reima</a></div>
+                  <div class="item-footer">
+                    <div class="top">
+                      <div class="price">
+                        <div class="old">111 790 руб.</div>
+                        <div class="current">111 690 руб.</div>
+                      </div>
+                      <div class="add-to-cart"><a href="#" title="Добавить в корзину"></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-wrapper">
+                <div class="image">
+                  <a href="#"><img src="images/content/items-top/2.jpg"></a>
+                </div>
+                <div class="description">
+                  <div class="title"><a href="#">Куртка, Lassie by Reima</a></div>
+                  <div class="item-footer">
+                    <div class="top">
+                      <div class="price">
+                        <div class="old">111 790 руб.</div>
+                        <div class="current">111 690 руб.</div>
+                      </div>
+                      <div class="add-to-cart"><a href="#" title="Добавить в корзину"></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-wrapper">
+                <div class="image">
+                  <a href="#"><img src="images/content/items-top/3.jpg"></a>
+                </div>
+                <div class="description">
+                  <div class="title"><a href="#">Куртка, Lassie by Reima</a></div>
+                  <div class="item-footer">
+                    <div class="top">
+                      <div class="price">
+                        <div class="old">111 790 руб.</div>
+                        <div class="current">111 690 руб.</div>
+                      </div>
+                      <div class="add-to-cart"><a href="#" title="Добавить в корзину"></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-wrapper">
+                <div class="image">
+                  <a href="#"><img src="images/content/items-top/4.jpg"></a>
+                </div>
+                <div class="description">
+                  <div class="title"><a href="#">Куртка, Lassie by Reima</a></div>
+                  <div class="item-footer">
+                    <div class="top">
+                      <div class="price">
+                        <div class="old">111 790 руб.</div>
+                        <div class="current">111 690 руб.</div>
+                      </div>
+                      <div class="add-to-cart"><a href="#" title="Добавить в корзину"></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-wrapper">
+                <div class="image">
+                  <a href="#"><img src="images/content/items-top/5.jpg"></a>
+                </div>
+                <div class="description">
+                  <div class="title"><a href="#">Куртка, Lassie by Reima</a></div>
+                  <div class="item-footer">
+                    <div class="top">
+                      <div class="price">
+                        <div class="old">111 790 руб.</div>
+                        <div class="current">111 690 руб.</div>
+                      </div>
+                      <div class="add-to-cart"><a href="#" title="Добавить в корзину"></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="viewed-items popular-items main-items">
+          <h2 class="headling red small">Просмотренные товары</h2>
+          <div class="items-list">
+            <div class="item">
+              <div class="item-wrapper">
+                <div class="image">
+                  <a href="#"><img src="images/content/items-top/7.jpg"></a>
+                </div>
+                <div class="description">
+                  <div class="title"><a href="#">Куртка, Lassie by Reima</a></div>
+                  <div class="item-footer">
+                    <div class="top">
+                      <div class="price">
+                        <div class="old">111 790 руб.</div>
+                        <div class="current">111 690 руб.</div>
+                      </div>
+                      <div class="add-to-cart"><a href="#" title="Добавить в корзину"></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-wrapper">
+                <div class="image">
+                  <a href="#"><img src="images/content/items-top/6.jpg"></a>
+                </div>
+                <div class="description">
+                  <div class="title"><a href="#">Куртка, Lassie by Reima</a></div>
+                  <div class="item-footer">
+                    <div class="top">
+                      <div class="price">
+                        <div class="old">111 790 руб.</div>
+                        <div class="current">111 690 руб.</div>
+                      </div>
+                      <div class="add-to-cart"><a href="#" title="Добавить в корзину"></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-wrapper">
+                <div class="image">
+                  <a href="#"><img src="images/content/items-top/5.jpg"></a>
+                </div>
+                <div class="description">
+                  <div class="title"><a href="#">Куртка, Lassie by Reima</a></div>
+                  <div class="item-footer">
+                    <div class="top">
+                      <div class="price">
+                        <div class="old">111 790 руб.</div>
+                        <div class="current">111 690 руб.</div>
+                      </div>
+                      <div class="add-to-cart"><a href="#" title="Добавить в корзину"></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-wrapper">
+                <div class="image">
+                  <a href="#"><img src="images/content/items-top/4.jpg"></a>
+                </div>
+                <div class="description">
+                  <div class="title"><a href="#">Куртка, Lassie by Reima</a></div>
+                  <div class="item-footer">
+                    <div class="top">
+                      <div class="price">
+                        <div class="old">111 790 руб.</div>
+                        <div class="current">111 690 руб.</div>
+                      </div>
+                      <div class="add-to-cart"><a href="#" title="Добавить в корзину"></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-wrapper">
+                <div class="image">
+                  <a href="#"><img src="images/content/items-top/3.jpg"></a>
+                </div>
+                <div class="description">
+                  <div class="title"><a href="#">Куртка, Lassie by Reima</a></div>
+                  <div class="item-footer">
+                    <div class="top">
+                      <div class="price">
+                        <div class="old">111 790 руб.</div>
+                        <div class="current">111 690 руб.</div>
+                      </div>
+                      <div class="add-to-cart"><a href="#" title="Добавить в корзину"></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="top-footer">
+      <div class="wrapper">
+        <div class="contacts">
+          <div class="tel"><a href="#" type="tel">(065) 26 56 415</a></div>
+          <div class="email"><a href="#" type="email">info@clothes-things.com</a></div>
+          <div class="callback">
+            <a class="popup-with-move-anim" href="#small-dialog">
+              <i class="icon"></i>
+              <span>Заказать звонок</span>
+            </a>
+          </div>
+        </div>
+  
+        <nav class="menu">
+          <ul>
+            <li><a href="#">О магазине</a></li>
+            <li><a href="#">Как купить</a></li>
+            <li><a href="#">Гарантии</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Доставка</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+  
+        <div class="rss-form">
+          <h3>Подписка на новости</h3>
+          <form>
+            <input type="text" placeholder="Ваше имя*" class="inp-text">
+            <input type="submit" value="" class="inp-submit">
+          </form>
+        </div>
+        <div class="socials">
+          <h3>Присоединяйся</h3>
+          <ul>
+            <li class="vk"><a href="#"></a></li>
+            <li class="ok"><a href="#"></a></li>
+            <li class="fb"><a href="#"></a></li>
+            <li class="gp"><a href="#"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-footer">
+      <div class="wrapper">
+        <div class="copyright">Clothes & Things © Все права защищены, 2015</div>
+      </div>
+    </div>
+  </footer>
+  <!--Scripts-->
+  <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/plugins.js"></script>
+  <script type="text/javascript" src="js/functions.js"></script>
+</body>
+</html>

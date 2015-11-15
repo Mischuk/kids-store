@@ -1,0 +1,347 @@
+.category-lead
+  display table
+  height 300px
+  margin-bottom 50px
+  background-color $green
+  color #fff
+  .image,
+  .text
+    display table-cell
+    vertical-align middle
+    height 100%
+  .image
+    width 300px
+    background-repeat no-repeat
+    background-position 50% 50%
+    background-size cover
+  .text
+    padding 0 45px
+    h2
+      padding-bottom 30px
+      font-size 22px
+      line-height 1
+      text-transform uppercase
+    p
+      font-size 14px
+      line-height 22px
+
+.filtred-items
+  .header
+    cursor default
+    height 24px
+    clearfix()
+    .total
+      float left
+      font-size 24px
+      line-height 1
+      span
+        semi-bold()
+    .options
+      float right
+      clearfix()
+      .sort,
+      .change-view
+        float left
+        > span
+          display inline-block
+          vertical-align middle
+          height 24px
+          line-height 24px
+          font-size 13px
+          cursor default
+          semi-bold()
+      .change-view
+        margin-left 20px
+        a
+          display inline-block
+          vertical-align middle
+          line-height 24px
+          width 19px
+          height 19px
+          margin-left 10px
+          background-image url('../images/sprite.png')
+          background-repeat no-repeat
+          cursor pointer
+          &.active
+            cursor default
+        .change-view-list
+          background-position -193px -189px
+          &.active,
+          &:hover
+            background-position -249px -189px
+        .change-view-block
+          background-position -222px -189px
+          &.active,
+          &:hover
+            background-position -163px -189px
+  .items-list
+    margin-top 40px
+    &.view-block
+      .item
+        &:nth-child(4n+1)
+          margin-left 0
+          clear left
+    &.view-list
+      .item
+        width 100%
+        height 270px
+        margin-left 0
+        margin-bottom 60px
+        &:hover
+          .item-wrapper
+            position static
+            width 100%
+            padding 0
+            border none
+        .hidden-details
+           opacity 1
+           height auto
+           visibility visible
+        .item-wrapper
+          clearfix()
+          height 100%
+        .lead-paragraph
+          height auto
+          overflow visible
+        .image
+          float left
+          width 25%
+          height 100%
+          line-height 270px
+        .description
+          position relative
+          float left
+          width 50%
+          height 100%
+          padding-top 0
+          padding-left 30px
+          padding-right 30px
+        .hidden-details
+          float left
+          width 25%
+          .colors, .sizes
+            .list
+              padding-left 0
+            .title
+              margin-top 0
+        .item-footer
+          position absolute
+          left 30px
+          bottom 0
+          height 100px
+          width 393px
+          background-color #fff
+          box-shadow 0 -15px 10px 5px rgba(255,255,255,.99)
+          .bottom
+            height 40px
+          .counter form input
+            line-height 40px
+.sidebar
+  .categories
+    margin-bottom 40px
+    .accordrion-item-link
+      position relative
+      display inline-block
+      width 100%
+      height 45px
+      line-height 45px
+      padding-left 20px
+      padding-right 20px
+      background-color #a39f9e
+      color #fff
+      border-bottom 1px solid #fff
+      font-size 14px
+      anim(background-color, .25s)
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -207px -155px;
+        width: 11px;
+        height: 7px;
+        position absolute
+        right 20px
+        top 50%
+        margin-top -(@height/2)
+        visibility hidden
+        transform rotate(-90deg) translateY(30px)
+        anim(all, .25s)
+      &:hover
+        background-color $green
+        &:after
+          visibility visible
+          transform rotate(-90deg) translateY(0)
+      &.active
+        background-color $green
+        &:after
+          visibility visible
+          transform rotate(0deg) translateY(0)
+    .accordion-content
+      a
+        display inline-block
+        padding-left 20px
+        padding-right 20px
+        width 100%
+        height 45px
+        line-height 45px
+        border-bottom 1px solid #f7faf9
+        font-size 13px
+        color $black
+        anim(all, .25s)
+        &:hover
+          background-color #f7faf9
+          color $green
+          regular()
+      li:last-child a
+        border-bottom none
+.sidebar-filters
+  background-color #f7faf9
+  .header
+    height 45px
+    line-height 45px
+    a
+      position relative
+      display inline-block
+      width 100%
+      height 45px
+      line-height 45px
+      color $black
+      padding-left 20px
+      padding-right 20px
+      semi-bold()
+      font-size 16px
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -188px -155px;
+        width: 11px;
+        height: 7px;
+        position absolute
+        right 20px
+        top 50%
+        margin-top -(@height/2)
+      &:hover
+        text-decoration underline
+  section
+    padding 0 20px
+    transition height 0.25s ease-out
+    clearfix()
+  .price,
+  .sizes,
+  .colors,
+  .season,
+  .brands
+    border-bottom 1px solid #dedfde
+
+
+  .price
+    .val-from, .val-to
+      position: absolute;
+      bottom: -25px;
+      left: -28px;
+      width: 56px;
+      font-size 13px
+      color $black
+      text-align: center;
+      cursor: default;
+    .slider-price
+      position relative
+      top -55px
+    .price-inputs
+      height 105px
+      font-size 0
+      input
+        display inline-block
+        width 75px
+        height 40px
+        padding-left 10px
+        padding-right 10px
+        font-size 14px
+        &:last-child
+          margin-left 10px
+  .sizes
+    section
+      margin-bottom 15px
+      > div
+        width 50%
+        margin-bottom 15px
+        float left
+  .colors
+    section
+      margin-bottom 20px
+      > div
+        float left
+        width 27px
+        margin-left 6px
+        margin-bottom 6px
+        &:nth-child(5n+1)
+          margin-left 0
+          clear left
+    input[type="checkbox"]
+      display none
+      & + label
+          .color-icon
+            position relative
+            display inline-block
+            width 27px
+            height 27px
+            vertical-align middle
+            cursor pointer
+    input[type="checkbox"] + label
+      cursor pointer
+      -webkit-user-select none
+      -moz-user-select none
+      -ms-user-select none
+      -o-user-select none
+      user-select none
+    input[type="checkbox"]:checked
+      & + label .color-icon
+          border 3px solid #bdecdf !important
+  .season,
+  .collections
+    section
+      margin-bottom 20px
+      > div
+        margin-bottom 10px
+    .all a
+      display inline-block
+      margin-top 10px
+      color $green
+      regular-italic()
+      font-size 13px
+      text-decoration underline
+      &:hover
+        color $black
+  .brands
+    margin-bottom 0
+    section
+      margin-bottom 20px
+    .custom-scrollbar
+      height 130px
+    .mCSB_container > div
+      margin-bottom 10px
+      &:last-child
+        margin-bottom 0
+  .buttons
+    padding 0 20px
+    a
+      display inline-block
+      height 45px
+      width 100%
+      text-align center
+      line-height 45px
+      text-transform uppercase
+      color #fff
+      &:hover
+        text-decoration underline
+    .filter-apply
+      background-color $green
+      margin-bottom 10px
+      margin-top 10px
+    .filter-reset
+      background-color $gray
+      margin-bottom 20px
+  .hide
+    section
+      height 0
+      overflow hidden
+      margin-bottom 0
+    .header a:after
+      transform rotate(-90deg)

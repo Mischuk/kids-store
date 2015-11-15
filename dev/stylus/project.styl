@@ -20,6 +20,18 @@ footer, .container:after
   position relative
   margin 0 auto
   height 100%
+.main
+  clearfix()
+  .sidebar
+    width 200px
+    float left
+  .content
+    float right
+    width 906px
+    &.full
+      width 100%
+
+
 /*!=================
   Basic elements
 ====================*/
@@ -49,84 +61,13 @@ i.icon
   position relative
   display inline-block
 
-/* Owl carousel custom styles */
-.owl-item
-  opacity 0
-  anim(opacity, .25s)
-  &.active
-    opacity 1
-.content-carousel
-  .owl-item
-    opacity 1
-.owl-controls
-  position absolute
-  left 0
-  top 0
-  width 0
-  height 100%
-.owl-next,
-.owl-prev
-  width: 27px;
-  height: 47px;
-  background-image url('../images/sprite.png')
-  background-repeat no-repeat
-  text-indent -9999px
-  position absolute
-  top 50%
-  margin-top -(@height/2)
-  z-index 20
-  cursor pointer
-  &.disabled
-    opacity .2
-    cursor default
-.owl-prev
-  background-position 0 -35px
-  left -47px
-  &:hover
-    background-position -71px -35px
-.owl-next
-  background-position -111px -35px
-  right -47px
-  &:hover
-     background-position -39px -35px
-.owl-n,
-.owl-d
-  position absolute
-  left 0
-  top 0
-  height 100%
-  width 100%
-.owl-d
-  height 22px
-  bottom 10px
-  top auto
-  text-align right
-  .wrapper
-    padding-right 5px
-.owl-dot
-  display inline-block
-  vertical-align middle
-  margin-left 5px
-  margin-right 5px
-  cursor pointer
-  span
-    display block
-    z-index 10
-    width 16px
-    height 16px
-    position relative
-    border-radius 50%
-    border 2px solid $black
-    anim(border-color, .25s)
-    &:hover
-      border-color $green
-  &.active
-    span
-      top 0
-      width 22px
-      height 22px
-      background-color $green
-      border-color $green
+::-moz-selection
+  background-color $green
+  color #000
+::selection
+  background-color $green
+  color #000
+
 /*!=================
   Extended classes
 ====================*/
@@ -136,6 +77,16 @@ i.icon
   display inline-block
   margin-bottom 40px
   letter-spacing .5px
+  &.green
+    color $green
+  &.red
+    color $red
+  &.small
+    font-size 24px
+    margin-bottom 15px
+  &.bold
+    semi-bold()
+    text-transform uppercase
 
 .green-border-button
   display inline-block
@@ -150,193 +101,200 @@ i.icon
     background-color $green
     color #fff
 
-
-.burger,
-.burger:hover,
-.burger:active,
-.burger:visited
-  text-decoration: none;
-  color: #a39f9e
-.burger
-  margin: 0
-  display: inline-block;
-.burger .burger-label
-  line-height: 30px;
-  font-size: 30px;
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 12px;
-.burger .burger-icon
-  display: inline-block
-  width: 36px
-  height: 30px
-.burger .burger-icon span,
-.burger .burger-icon span:before,
-.burger .burger-icon span:after
-  display: block
-  width: 100%
-  height: 6px
-  background: #a39f9e
-  transition: all 0.5s
-  backface-visibility: hidden
-.burger .burger-icon span
-  position: relative;
-  margin: 0
-.burger .burger-icon span:before,
-.burger .burger-icon span:after
-  position: absolute
-  content: ""
-.burger .burger-icon span:before
-  top: -8px
-.burger .burger-icon span:after
-  top: 8px
-.burger:hover .burger-icon span:before
-  transform: translate(0px, -4px)
-.burger:hover .burger-icon span:after
-  transform: translate(0px, 4px)
-.burger.selected .burger-icon span:before
-  transform: translate(0px, 8px) rotate(-45deg)
-.burger.selected .burger-icon span:after
-  transform: translate(0px, -8px) rotate(45deg)
-.burger.selected .burger-icon span
-  background transparent
-.menu-trigger
-  position absolute
-  left 2%
-  top 18px
+.accordion-content
   display none
-  z-index 20
+  anim(all, .25s)
+  &.opened
+    display block
 
-/* Modals */
-/* Dark ovelay, start state */
-.my-mfp-zoom-in.mfp-bg {
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease-out;
-  -moz-transition: opacity 0.3s ease-out;
-  -o-transition: opacity 0.3s ease-out;
-  transition: opacity 0.3s ease-out;
-}
-/* animate in */
-.my-mfp-zoom-in.mfp-ready.mfp-bg {
-  opacity: 0.8;
-}
-/* animate out */
-.my-mfp-zoom-in.mfp-removing.mfp-bg {
-  opacity: 0;
-}
-
-
-
-/**
- * Fade-move animation for second dialog
- */
-
-/* at start */
-.my-mfp-slide-bottom .zoom-anim-dialog {
-  opacity: 0;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-
-  -webkit-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
-  -moz-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
-  -ms-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
-  -o-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
-  transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
-
-}
-
-/* animate in */
-.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
-  opacity: 1;
-  -webkit-transform: translateY(0) perspective( 600px ) rotateX( 0 );
-  -moz-transform: translateY(0) perspective( 600px ) rotateX( 0 );
-  -ms-transform: translateY(0) perspective( 600px ) rotateX( 0 );
-  -o-transform: translateY(0) perspective( 600px ) rotateX( 0 );
-  transform: translateY(0) perspective( 600px ) rotateX( 0 );
-}
-
-/* animate out */
-.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
-  opacity: 0;
-
-  -webkit-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
-  -moz-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
-  -ms-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
-  -o-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
-  transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
-}
-
-/* Dark overlay, start state */
-.my-mfp-slide-bottom.mfp-bg {
-  opacity: 0;
-
-  -webkit-transition: opacity 0.3s ease-out;
-  -moz-transition: opacity 0.3s ease-out;
-  -o-transition: opacity 0.3s ease-out;
-  transition: opacity 0.3s ease-out;
-}
-/* animate in */
-.my-mfp-slide-bottom.mfp-ready.mfp-bg {
-  opacity: 0.5;
-}
-/* animate out */
-.my-mfp-slide-bottom.mfp-removing.mfp-bg {
-  opacity: 0;
-}
-
-#small-dialog
-  background: white;
-  padding: 35px;
-  text-align: left;
-  max-width: 400px;
-  margin: 40px auto;
-  position: relative;
-  .mfp-close
-    light()
-    font-size 42px
-    font-family 'Open Sans'
-  .header
-    h2
-      position relative
-      font-size 24px
-      line-height 1
-      padding-bottom 25px
-      margin-bottom 25px
-      &:after
-        content ''
-        height 3px
-        width 75px
-        background-color $green
-        position absolute
-        left 0
-        bottom 0
-    .small
-      margin-bottom 25px
-      light()
-      cursor default
-      font-size 16px
-  form
+/* Breadcrumbs */
+.breadcrumbs
+  float left
+  width 100%
+  margin 30px 0
+  ul
     clearfix()
-  input[type="text"]
-    height 40px
-    width 100%
-    margin-bottom 10px
-    border 1px solid $green
-    padding-left 20px
-    padding-right 20px
-    light()
-    font-size 16px
-    &:focus
-      border-width 3px
-  input[type="submit"]
-    float right
-    width 160px
-    height 40px
-    line-height 40px
-    background-color $green
+  li
+    position relative
+    float left
+    &:after
+      content '/'
+      color $gray
+      padding-left 5px
+      padding-right 5px
+    &:last-child:after
+      display none
+  a
+    regular-italic()
+    color $gray
+    anim(all, .25s)
+    &:hover
+      text-decoration underline
+      color $black
+  span
+    regular-italic()
+    color $green
+    cursor default
+
+/* Pager */
+.pager
+  float left
+  width 100%
+  text-align right
+  margin-top 10px
+  margin-bottom 50px
+  ul
+    display inline-block
+    clearfix()
+    li
+      float left
+      margin 0 5px
+      line-height 38px
+      a
+        display block
+        width 42px
+        height 38px
+        border 1px solid $gray
+        text-align center
+        line-height 36px
+        vertical-align middle
+        color $black
+        anim(all, .25s)
+        &:hover
+          border-color $green
+          color $green
+      span
+        display inline-block
+        vertical-align bottom
+        line-height 48px
+        height 38px
+        width 20px
+        text-align center
+        cursor default
+      &:last-child,
+      &:first-child
+        a
+          width 110px
+      &:last-child
+        margin-right 0
+
+/* Checkboxes */
+input[type="checkbox"]
+  display none
+  & + label
+      .icon
+        display inline-block
+        width 18px
+        height 18px
+        vertical-align middle
+        border 1px solid #d8d7d6
+        cursor pointer
+        background-color #fff
+        &:hover
+          border-color $green
+      .text
+        display inline-block
+        vertical-align middle
+        height 18px
+        line-height 18px
+        font-size 14px
+        padding-left 6px
+input[type="checkbox"] + label
+  cursor pointer
+  -webkit-user-select none
+  -moz-user-select none
+  -ms-user-select none
+  -o-user-select none
+  user-select none
+input[type="checkbox"]:checked
+  & + label .icon
+      background $green
+      box-shadow inset 0 0 0 3px white
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:hover,
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:active
+  background $green !important
+.mCSB_inside > .mCSB_container
+  margin-right 15px
+.mCSB_scrollTools
+  width 13px
+
+/* Tabs */
+.tabs {display: none;visibility: hidden;}
+.js-tabby .tabs {display: block;visibility: visible;}
+.tabs a,.tabs button {cursor: pointer;}
+.js-tabby .tabs-pane {display: none;visibility: hidden;}
+.tabs-pane.current{display: block;visibility: visible;}
+.tabs:before,.tabs:after {display: table;content: "";}
+.tabs:after {clear: both;}
+
+/* Counter */
+.counter
+  position relative
+  float left
+  width 70px
+  height 100%
+  margin-left 10px
+  form
+    height 100%
+    input
+      width 38px
+      position absolute
+      left 50%
+      margin-left -(@width/2)
+      user-select none
+      text-align center
+      color #3f4147
+      font-size 18px
+      line-height 37px
+      border none
+      background-color #f2f2f2
+  .plus, .minus
+    width: 16px;
+    height: 15px;
+    position absolute
+    top 50%
+    margin-top -(@height/2)
+    text-indent -9999px
+    user-select none
+    cursor pointer
     border none
-    color #fff
-    font-size 16px
-    text-transform uppercase
+  .plus
+    background: url('../images/sprite.png') no-repeat -171px -95px;
+    right 0
+    &.hover,
+    &:hover
+      background-position -195px -95px
+    &.disabled
+      background-position -171px -95px !important
+      cursor default
+  .minus
+    left 0
+    background: url('../images/sprite.png') no-repeat -122px -95px;
+    &.hover,
+    &:hover
+      background-position -147px -95px
+    &.disabled
+      background-position -122px -95px !important
+      cursor default
+  &.hover
+    .plus
+      background-position -195px -95px
+    .minus
+      background-position -147px -95px
+
+.top-sales,
+.viewed-items
+  border-bottom 1px solid #ededed
+  .items-list
+    margin-top 20px
+  .item
+    height 385px
+    .title
+      height 70px
+  .item:nth-child(5n+1)
+    margin-left 0
+    clear left
+.mobile-menu-buttons a
+  display none
