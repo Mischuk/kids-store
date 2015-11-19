@@ -3010,10 +3010,13 @@ img.mfp-img {
   display: table;
   clear: both;
 }
-.main-catalog.opened-menu {
+/*.main-catalog.opened-menu {
+  position: relative;
+}*/
+.main-catalog.opened-menu > a{
   position: relative;
 }
-.main-catalog.opened-menu:before {
+.main-catalog.opened-menu > a:before {
   content: '';
   position: absolute;
   height: 3px;
@@ -3026,7 +3029,7 @@ img.mfp-img {
      -moz-transition: all 0.25s ease-out;
           transition: all 0.25s ease-out;
 }
-.main-catalog.opened-menu:after {
+.main-catalog.opened-menu > a:after {
   content: '';
   width: 0;
   height: 0;
