@@ -488,8 +488,15 @@
     width 49%
   .profile-item .details .footer .main-price
     text-align right
+  #cloud-zoom-big,
+  .cloud-zoom-lens
+    display none !important
+  .lead-img, .lead-img *
+    cursor pointer !important
   .group-items
-    display none
+    display block
+    .item
+      padding 15px
 @media screen and (max-width 790px)
   .popular-items .item:nth-child(5n+1)
     clear none !important
@@ -632,11 +639,6 @@
     top 135px
   .main
     position static
-    .breadcrumbs
-      position absolute
-      left 2%
-      width 98%
-      top 235px
     .sidebar, .content
       width 100%
   .accordion.categories
@@ -650,10 +652,10 @@
     overflow visible
     margin-bottom 15px !important
   .sidebar-filters .buttons
-    display none
+    text-align center
   .sidebar-filters .buttons a
     width 220px
-    margin-right 30px
+    margin 0 auto
   .sidebar-filters
     top 55px
     margin-bottom 2%
@@ -758,7 +760,7 @@
   .main-menu
     display none
   .content
-    padding-top 55px
+    padding-top 15px
   .main-menu
     margin-bottom 20px
   .pager
@@ -777,6 +779,23 @@
   .profile-item .lead-profile-image-thumb a
     height 65px
     line-height 59px
+  .main-items .hidden-details .colors .list li:nth-child(3n+1),
+  .main-items .hidden-details .sizes .list li:nth-child(3n+1)
+    clear none
+    margin-left 2%
+  .main-items .hidden-details .colors .list li,
+  .main-items .hidden-details .sizes .list li
+    width 20%
+    margin-left 2%
+    margin-bottom 2%
+  .main-items .hidden-details .colors .list li,
+  .main-items .hidden-details .sizes .list li,
+  .main-items .hidden-details .colors .list li:nth-child(4n),
+  .main-items .hidden-details .sizes .list li:nth-child(4n)
+    margin-left 2%
+  .main-items .hidden-details .sizes
+    padding-bottom 20px
+
 @media screen and (max-width 740px)
   footer,
   .top-footer
@@ -947,6 +966,27 @@
     margin-right 4%
     margin-top 20px
     margin-bottom 20px
+@media screen and (max-width 670px)
+  .group-items .item .helper
+    display block
+  .group-items .item .column,
+  .group-items .item .plus,
+  .group-items .item .equal,
+  .group-items .item .total
+    display block
+  .group-items .item .column,
+  .group-items .item .plus,
+  .group-items .item .equal,
+  .group-items .item .total
+    width 200px
+    margin 0 auto
+    max-width 200px
+    text-align center
+  .group-items .item .column .image
+    margin 0 auto
+  .group-items .item .column .title,
+  .group-items .item .column .price
+    text-align center
 @media screen and (max-width 568px)
   .shares .item .image,
   .news .item .image
@@ -955,7 +995,16 @@
       width 100%
       height auto
   .brands
-    display none
+    display block
+    .item
+      width 49%
+      margin-left 2%
+      &:nth-child(5n+1)
+        clear none
+        margin-left 2%
+      &:nth-child(2n+1)
+        margin-left 0
+        clear left
   .pager ul li
     margin-bottom 10px
   .profile-item .details .colors > div
@@ -977,13 +1026,19 @@
     margin-right 0
   .pager
     text-align center
-  .pager ul li:last-child a, .pager ul li:first-child a
-    width 95px
+  .pager ul li:last-child a,
+  .pager ul li:first-child a
+    width auto
+    padding-left 5px
+    padding-right 5px
   .pager ul li a,
   .pager ul li span
-    width 30px
-    height 30px
-    line-height 28px
+    width 20px
+    height 20px
+    line-height 18px
+    font-size 13px
+  .pager ul li > span
+    vertical-align top
 @media screen and (max-width 460px)
   .main-categories
     height auto
@@ -1055,6 +1110,12 @@
   .profile-item .details
     width 100%
     padding-left 0
+  .profile-item .header
+    clearfix()
+    padding-top 20px
+  .profile-item .details .articul,
+  .profile-item .details .brand
+    float left
 @media screen and (max-width 380px)
   .top-footer .menu > ul
     width 100%
@@ -1067,12 +1128,17 @@
     display none
   .mobile-menu-buttons a
     font-size 11px
-  .pager ul li:last-child,
-  .pager ul li:first-child
-    display none
   .pager
     margin-top 15px
     margin-bottom 20px
+  .brands
+    display block
+    .item
+      width 100%
+      clear none
+      margin-left 0 !important
+  .pager ul li
+    margin 0 2px
 @media screen and (max-width 320px)
   .bottom-header .contacts .tel
     font-size 18px

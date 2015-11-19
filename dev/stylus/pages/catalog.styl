@@ -59,7 +59,7 @@
           width 19px
           height 19px
           margin-left 10px
-          background-image url('../images/sprite.png')
+          background-image url('../images/sprite-inner.png')
           background-repeat no-repeat
           cursor pointer
           &.active
@@ -154,7 +154,7 @@
       anim(background-color, .25s)
       &:after
         content ''
-        background: url('../images/sprite.png') no-repeat -207px -155px;
+        background: url('../images/sprite-inner.png') no-repeat -207px -155px;
         width: 11px;
         height: 7px;
         position absolute
@@ -210,7 +210,7 @@
       font-size 16px
       &:after
         content ''
-        background: url('../images/sprite.png') no-repeat -188px -155px;
+        background: url('../images/sprite-inner.png') no-repeat -188px -155px;
         width: 11px;
         height: 7px;
         position absolute
@@ -235,12 +235,16 @@
     .val-from, .val-to
       position: absolute;
       bottom: -25px;
-      left: -28px;
+      left: -20px;
       width: 56px;
       font-size 13px
       color $black
       text-align: center;
       cursor: default;
+      background-color #f7faf9
+      border 1px solid $gray
+    .val-to
+      left -36px
     .slider-price
       position relative
       top -55px
@@ -293,7 +297,7 @@
       user-select none
     input[type="checkbox"]:checked
       & + label .color-icon
-          border 3px solid #bdecdf !important
+          border 3px solid $green !important
   .season,
   .collections
     section
@@ -314,11 +318,11 @@
     section
       margin-bottom 20px
     .custom-scrollbar
-      height 130px
+      height 135px
     .mCSB_container > div
       margin-bottom 10px
       &:last-child
-        margin-bottom 0
+        margin-bottom 5px
   .buttons
     padding 0 20px
     a

@@ -1,5 +1,19 @@
 $(document).ready(function(){
   //Functions
+  function leadProfileImage(){
+    CloudZoom.quickStart();
+    $(function(){
+      $('#zoom1').bind('click',function(){
+        var cloudZoom = $(this).data('CloudZoom');
+        cloudZoom.closeZoom();
+        $.fancybox.open(cloudZoom.getGalleryList());
+          return false;
+        });
+    });
+  };
+
+
+
   function modal() {
     $('.popup-with-move-anim').magnificPopup({
         type: 'inline',
@@ -43,7 +57,8 @@ $(document).ready(function(){
                   $(thisItem).removeClass('opened-menu');
                   $('.main-catalog-list').removeClass('opened');
                   $('header').removeClass('open');
-                  $('.main-catalog-list').find('li').eq(0).addClass('opened');
+                  $('.main-catalog-list > li').removeClass('opened');
+                  $('.main-catalog-list > li').eq(0).addClass('opened');
               }
           }, 500);
           thisItem.data('hoverTimer', timer)
@@ -51,6 +66,7 @@ $(document).ready(function(){
 
       $('.main-catalog-list > li').mouseenter(function (e1) {
           var thisItem = $(this);
+          eqHoveredItem = thisItem.index();
           clearTimeout(thisItem.data('hoverTimer'))
           var timer = setTimeout(function (e1) {
               if ($(thisItem).hasClass('opened')) {
@@ -64,17 +80,22 @@ $(document).ready(function(){
           thisItem.data('hoverTimer', timer)
       }).mouseleave(function (e2) {
           var thisItem = $(this);
+          eqHoveredItem = thisItem.index();
           clearTimeout(thisItem.data('hoverTimer'))
           var timer = setTimeout(function (e2) {
               if (!$(thisItem).hasClass('opened')) {
                   return;
               } else {
-                  $(thisItem).removeClass('opened');
+                  // $(thisItem).removeClass('opened');
                   // $('.container').removeClass("opened-submenu");
               }
           }, 500);
           thisItem.data('hoverTimer', timer)
       });
+
+      $('.main-catalog-list').hover(function(){
+        $('.main-catalog-list > li').eq(eqHoveredItem).addClass('opened');
+      })
     };
   };
 
@@ -276,7 +297,7 @@ $(document).ready(function(){
       start: [15000, 40000],
       behaviour: 'none',
       connect: true,
-      margin: 20000,
+      margin: 5000,
       step: stepPrice,
       range: {
         'min': minPrice,
@@ -428,41 +449,7 @@ $(document).ready(function(){
       });
     });
   }
-  function leadProfileImage(){
-    var $gallery = $('.lead-profile-image');
-    var $thumbs = $('.lead-profile-image-thumb');
-    $gallery.magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        closeOnContentClick: false,
-        closeBtnInside: false,
-        mainClass: 'mfp-with-zoom mfp-img-mobile',
-        image: {
-          verticalFit: true
-        },
-        gallery: {
-          enabled: true
-        },
-        zoom: {
-          enabled: true,
-          duration: 300, // don't foget to change the duration also in CSS
-          opener: function(element) {
-            return element.find('img');
-          }
-        }
-      });
-      $thumbs.find('a').on('click', function(){
-        var eqImage = $(this).index();
-        if ($(this).hasClass('current')) {
-          return false;
-        } else {
-          $thumbs.find('a').removeClass('current');
-          $(this).addClass('current');
-          $gallery.find('a').fadeOut(250).removeClass('current');
-          $gallery.find('a').eq(eqImage).fadeIn(250).addClass('current');
-        }
-      });
-  };
+
 
   $(window).on('load resize', function(){
     var SUBMENU_WIDTH = $('.main-catalog-list').width();
@@ -476,6 +463,7 @@ $(document).ready(function(){
 
     if($(window).width() <= 940) {
       $('.filtred-items .items-list').removeClass('view-list').addClass('view-block');
+
     }
 
     //Submenu width
@@ -509,5 +497,8 @@ $(document).ready(function(){
   leadProfileImage();
   tabs();
   mobileShowInnerMenus();
+  $('body').on('click', '.cloudzoom-gallery', function(){
+    alert('123')
+  })
 });
 

@@ -1,0 +1,140 @@
+/* Second inner sprite */
+.main-items .item-footer .add-to-cart a:after,
+.main-items .item-footer .add-to-cart a:before
+      background: url("../images/sprite-inner.png") no-repeat 0 -95px;
+.counter .plus
+  background: url("../images/sprite-inner.png") no-repeat -171px -95px;
+.counter .minus
+  background: url("../images/sprite-inner.png") no-repeat -122px -95px;
+.main-items .item-footer .options .zoom a
+  background: url("../images/sprite-inner.png") no-repeat -219px -95px;
+.main-items .item-footer .options .param a
+  background: url("../images/sprite-inner.png") no-repeat -70px -95px;
+.main-items .item-footer .options .favourite a
+  background: url("../images/sprite-inner.png") no-repeat -268px -95px;
+.styledSelect:after
+  background: url("../images/sprite-inner.png") no-repeat -167px -155px;
+.main-items .item-footer .add-to-cart a:before
+  background: url("../images/sprite-inner.png") no-repeat -44px -126px;
+
+/* Second style mobile menu */
+.bottom-header .logo
+  top 80px
+.mobile-menu-buttons
+  position static
+  background none
+.main-menu,
+.sidebar-filters
+  position static
+.main .breadcrumbs
+  top 160px
+.mobile-menu-buttons
+  position relative
+  top 0
+  left 0
+  bottom auto
+  right auto
+.main > .mobile-menu-buttons
+  position static
+.mobile-menu-show-categories
+  position absolute
+  left 0
+  top 0
+
+/* Item cloud zoom */
+img.cloudzoom-gallery {
+    border:1px solid #ccc;
+}
+a.thumb-link{
+    text-decoration: none;
+    display:inline-block;
+    margin-right:5px;
+}
+
+.cloudzoom-lens {
+    cursor:pointer;
+}
+.cloudzoom-lens + div {display: none !important;}
+
+/*Grid*/
+.ccontainer {
+  width: 100%;
+}
+.col-sm-6{
+  width: 100%;
+}
+.cloudzoom-blank,
+.cloudzoom-zoom,
+.cloudzoom-zoom-inside
+  img
+    max-height 2000px
+.text-center
+  .thumb-link
+    float left
+    width 80px
+    height 80px
+    line-height 80px
+    margin-right 0
+    margin-left 10px
+    margin-bottom 10px
+    box-sizing border-box
+    border 1px solid $gray
+    overflow hidden
+    &:nth-child(5n+1)
+      margin-left 0
+      clear left
+    &.cloudzoom-gallery-active
+      position relative
+      border-color transparent
+      &:after
+        content ''
+        width 100%
+        height 100%
+        position absolute
+        left 0
+        top 0
+        border 3px solid $green
+    img
+      display inline-block
+      vertical-align middle
+      width 100%
+      height auto
+      border none
+.gallery
+  .text-center:first-child
+    border 1px solid $gray
+.text-center + .text-center
+  margin-top 10px
+  clearfix()
+@media screen and (max-width: 1260px)
+  .text-center
+    .thumb-link
+      float left
+      width 18.3%
+      height 80px
+      line-height 80px
+      margin-right 0
+      margin-left 2%
+      margin-bottom 2%
+      box-sizing border-box
+      border 1px solid $gray
+      overflow hidden
+      &:nth-child(5n+1)
+        margin-left 0
+        clear left
+@media screen and (max-width: 768px)
+  .main > .mobile-menu-buttons
+    height 0
+  .mobile-menu-show-categories
+    top 180px
+    left 50%
+    margin-left -110px
+  .sidebar .mobile-menu-buttons
+    text-align center
+  .sidebar .mobile-menu-buttons a
+    margin-right 0
+  header + .mobile-menu-buttons
+    position static
+@media screen and (max-width: 568px)
+  .mobile-menu-buttons a
+    width 220px

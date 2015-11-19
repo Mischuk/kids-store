@@ -16,20 +16,48 @@
         <div class="profile-item">
           <div class="item-title"><h2 class="headling small">Куртка, Lassie by Reima</h2></div>
           <div class="gallery">
-            <div class="lead-profile-image">
-              <a class="current" href="images/content/items/1.jpg"><img src="images/content/items/1.jpg"></a>
-              <a href="images/content/items/2.jpg"><img src="images/content/items/2.jpg"></a>
-              <a href="images/content/items/3.jpg"><img src="images/content/items/3.jpg"></a>
-              <a href="images/content/items/4.jpg"><img src="images/content/items/4.jpg"></a>
-              <a href="images/content/items/5.jpg"><img src="images/content/items/5.jpg"></a>
-            </div>
-            <div class="lead-profile-image-thumb">
-              <a href="#" class="current"><img src="images/content/items/1.jpg"></a>
-              <a href="#"><img src="images/content/items/2.jpg"></a>
-              <a href="#"><img src="images/content/items/3.jpg"></a>
-              <a href="#"><img src="images/content/items/4.jpg"></a>
-              <a href="#"><img src="images/content/items/5.jpg"></a>
-            </div>
+
+                  <div class="text-center">
+                    <img style="width:100%;" class="cloudzoom" id ="zoom1" src="images/cloudzoom/large/image1.jpg"
+                         data-cloudzoom='
+                         zoomImage:"images/cloudzoom/large/image1.jpg",
+                         zoomSizeMode: "image",
+                         tintColor:"#000",
+                         tintOpacity:0.25,
+                         captionPosition:"bottom",
+                         maxMagnification:4,
+                         autoInside:750
+                         '>
+                  </div>
+
+                  <div class="text-center">
+                    <a href="images/cloudzoom/large/image1.jpg" class="thumb-link">
+                      <img class="cloudzoom-gallery" src="images/cloudzoom/small/image1.jpg"
+                             alt =""
+                             data-cloudzoom='
+                             useZoom:"#zoom1",
+                             image:"images/cloudzoom/small/image1.jpg",
+                             zoomImage:"images/cloudzoom/large/image1.jpg"'>
+                    </a>
+
+                    <a href="images/cloudzoom/large/image2.jpg" class="thumb-link">
+                        <img class="cloudzoom-gallery" src="images/cloudzoom/small/image2.jpg"
+                             alt =""
+                             data-cloudzoom='
+                             useZoom:"#zoom1",
+                             image:"images/cloudzoom/small/image2.jpg",
+                             zoomImage:"images/cloudzoom/large/image2.jpg"'>
+                    </a>
+                    <a href="images/cloudzoom/large/image3.jpg" class="thumb-link">
+                        <img class="cloudzoom-gallery"  src="images/cloudzoom/small/image3.jpg"
+                             alt =""
+                             data-cloudzoom='
+                             useZoom:"#zoom1",
+                             image:"images/cloudzoom/small/image3.jpg"
+                             '>
+                    </a>
+                  </div>
+
           </div>
           <div class="details">
             <div class="header">
@@ -47,61 +75,52 @@
             </div>
             <div class="colors">
               <span class="title">Цвет:</span>
-              <div>
-                <input id="color-1" type="checkbox" name="colors"/>
-                <label for="color-1">
-                  <span class="color-icon" style="background: #000"></span>
+              <div class="colors-list">
+                <label class="radio-custom">
+                  <input name="color-item" type="radio"/>
+                  <span style="background: #fff; border: 1px solid #d8d7d6;"></span>
                 </label>
-              </div>
-              <div>
-                <input id="color-2" type="checkbox" name="colors"/>
-                <label for="color-2">
-                  <span class="color-icon" style="background: #a6a6a6"></span>
+                <label class="radio-custom">
+                  <input name="color-item" type="radio"/>
+                  <span style="background: #a6a6a6"></span>
                 </label>
-              </div>
-              <div>
-                <input id="color-3" type="checkbox" name="colors"/>
-                <label for="color-3">
-                  <span class="color-icon" style="background: #fff; border: 1px solid #d8d7d6;"></span>
+                <label class="radio-custom">
+                  <input name="color-item" type="radio"/>
+                  <span style="background: #000"></span>
                 </label>
-              </div>
-              <div>
-                <input id="color-4" type="checkbox" name="colors"/>
-                <label for="color-4">
-                  <span class="color-icon" style="background: #dd1a31"></span>
+                <label class="radio-custom">
+                  <input name="color-item" type="radio"/>
+                  <span style="background: #dd1a31"></span>
                 </label>
-              </div>
-              <div>
-                <input id="color-5" type="checkbox" name="colors"/>
-                <label for="color-5">
-                  <span class="color-icon" style="background: #ff6eaf"></span>
+                <label class="radio-custom">
+                  <input name="color-item" type="radio"/>
+                  <span style="background: #ff6eaf"></span>
                 </label>
               </div>
             </div>
+
             <div class="sizes">
               <span class="title">Размер:</span>
-              <div>
-                <input id="size-1" type="checkbox" name="sizes"/>
-                <label for="size-1">
-                  <span class="icon">XS</span>
+              <div class="sizes-list">
+                <label class="radio-custom">
+                  <input name="color-item" type="radio"/>
+                  <span>12</span>
                 </label>
-              </div>
-              <div>
-                <input id="size-2" type="checkbox" name="sizes"/>
-                <label for="size-2">
-                  <span class="icon">XL</span>
+                <label class="radio-custom">
+                  <input name="color-item" type="radio"/>
+                  <span>13</span>
                 </label>
-              </div>
-              <div>
-                <input id="size-3" type="checkbox" name="sizes"/>
-                <label for="size-3">
-                  <span class="icon">L</span>
+                <label class="radio-custom">
+                  <input name="color-item" type="radio"/>
+                  <span>66</span>
                 </label>
-              </div>
-              <div>
-                <input id="size-4" type="checkbox" name="sizes"/>
-                <label for="size-4">
-                  <span class="icon">M</span>
+                <label class="radio-custom">
+                  <input name="color-item" type="radio"/>
+                  <span>99</span>
+                </label>
+                <label class="radio-custom">
+                  <input name="color-item" type="radio"/>
+                  <span>88</span>
                 </label>
               </div>
             </div>
@@ -111,7 +130,7 @@
                   <div class="old">11 890 руб.</div>
                   <div class="current">11 690 руб.</div>
                 </div>
-                <div class="counter hover">
+                <div class="counter">
                   <form method="post" action="">
                     <button class="plus">+</button>
                     <input type="text" value="1" class="counter-inp">
@@ -209,21 +228,99 @@
         </div>
         <div class="top-sales popular-items main-items">
           <h2 class="headling small">Лидеры продаж</h2>
-          <div class="items-list">
+          <div class="items-list view-block">
             <div class="item">
               <div class="item-wrapper">
                 <div class="image">
-                  <a href="#"><img src="images/content/items-top/1.jpg"></a>
+                  <a href="#"><img src="images/content/productions/6.jpg"></a>
                 </div>
                 <div class="description">
-                  <div class="title"><a href="#">Куртка, Lassie by Reima</a></div>
+                  <div class="title">
+                    <a href="#">Куртка, Lassie by Reima</a>
+                  </div>
+                  <div class="category"><a href="#">Одежда и обувь</a></div>
+                  <div class="lead-paragraph">Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.</div>
                   <div class="item-footer">
                     <div class="top">
                       <div class="price">
                         <div class="old">111 790 руб.</div>
                         <div class="current">111 690 руб.</div>
                       </div>
-                      <div class="add-to-cart"><a href="#" title="Добавить в корзину"></a></div>
+                      <div class="add-to-cart">
+                        <a href="#" title="Добавить в корзину"></a>
+                      </div>
+                    </div>
+                    <div class="bottom">
+                      <div class="counter">
+                        <form method="post" action="">
+                            <button class="plus">+</button>
+                            <input type="text" value="1" class="counter-inp">
+                            <button class="minus">-</button>
+                        </form>
+                      </div>
+                      <div class="options">
+                        <div class="zoom">
+                          <a href="#"></a>
+                        </div>
+                        <div class="param">
+                          <a href="#"></a>
+                        </div>
+                        <div class="favourite">
+                          <a href="#" title="Добавить в избранное"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden hidden-details">
+                  <div class="colors">
+                    <span class="title">Цвет:</span>
+                    <div class="colors-list">
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #fff; border: 1px solid #d8d7d6;"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #a6a6a6"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #000"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #dd1a31"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #ff6eaf"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="sizes">
+                    <span class="title">Размер:</span>
+                    <div class="sizes-list">
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>12</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>13</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>66</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>99</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>88</span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -232,17 +329,95 @@
             <div class="item">
               <div class="item-wrapper">
                 <div class="image">
-                  <a href="#"><img src="images/content/items-top/2.jpg"></a>
+                  <a href="#"><img src="images/content/productions/6.jpg"></a>
                 </div>
                 <div class="description">
-                  <div class="title"><a href="#">Куртка, Lassie by Reima</a></div>
+                  <div class="title">
+                    <a href="#">Куртка, Lassie by Reima</a>
+                  </div>
+                  <div class="category"><a href="#">Одежда и обувь</a></div>
+                  <div class="lead-paragraph">Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.</div>
                   <div class="item-footer">
                     <div class="top">
                       <div class="price">
                         <div class="old">111 790 руб.</div>
                         <div class="current">111 690 руб.</div>
                       </div>
-                      <div class="add-to-cart"><a href="#" title="Добавить в корзину"></a></div>
+                      <div class="add-to-cart">
+                        <a href="#" title="Добавить в корзину"></a>
+                      </div>
+                    </div>
+                    <div class="bottom">
+                      <div class="counter">
+                        <form method="post" action="">
+                            <button class="plus">+</button>
+                            <input type="text" value="1" class="counter-inp">
+                            <button class="minus">-</button>
+                        </form>
+                      </div>
+                      <div class="options">
+                        <div class="zoom">
+                          <a href="#"></a>
+                        </div>
+                        <div class="param">
+                          <a href="#"></a>
+                        </div>
+                        <div class="favourite">
+                          <a href="#" title="Добавить в избранное"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden hidden-details">
+                  <div class="colors">
+                    <span class="title">Цвет:</span>
+                    <div class="colors-list">
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #fff; border: 1px solid #d8d7d6;"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #a6a6a6"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #000"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #dd1a31"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #ff6eaf"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="sizes">
+                    <span class="title">Размер:</span>
+                    <div class="sizes-list">
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>12</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>13</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>66</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>99</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>88</span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -251,17 +426,95 @@
             <div class="item">
               <div class="item-wrapper">
                 <div class="image">
-                  <a href="#"><img src="images/content/items-top/3.jpg"></a>
+                  <a href="#"><img src="images/content/productions/6.jpg"></a>
                 </div>
                 <div class="description">
-                  <div class="title"><a href="#">Куртка, Lassie by Reima</a></div>
+                  <div class="title">
+                    <a href="#">Куртка, Lassie by Reima</a>
+                  </div>
+                  <div class="category"><a href="#">Одежда и обувь</a></div>
+                  <div class="lead-paragraph">Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.</div>
                   <div class="item-footer">
                     <div class="top">
                       <div class="price">
                         <div class="old">111 790 руб.</div>
                         <div class="current">111 690 руб.</div>
                       </div>
-                      <div class="add-to-cart"><a href="#" title="Добавить в корзину"></a></div>
+                      <div class="add-to-cart">
+                        <a href="#" title="Добавить в корзину"></a>
+                      </div>
+                    </div>
+                    <div class="bottom">
+                      <div class="counter">
+                        <form method="post" action="">
+                            <button class="plus">+</button>
+                            <input type="text" value="1" class="counter-inp">
+                            <button class="minus">-</button>
+                        </form>
+                      </div>
+                      <div class="options">
+                        <div class="zoom">
+                          <a href="#"></a>
+                        </div>
+                        <div class="param">
+                          <a href="#"></a>
+                        </div>
+                        <div class="favourite">
+                          <a href="#" title="Добавить в избранное"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden hidden-details">
+                  <div class="colors">
+                    <span class="title">Цвет:</span>
+                    <div class="colors-list">
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #fff; border: 1px solid #d8d7d6;"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #a6a6a6"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #000"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #dd1a31"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #ff6eaf"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="sizes">
+                    <span class="title">Размер:</span>
+                    <div class="sizes-list">
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>12</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>13</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>66</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>99</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>88</span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -270,17 +523,95 @@
             <div class="item">
               <div class="item-wrapper">
                 <div class="image">
-                  <a href="#"><img src="images/content/items-top/4.jpg"></a>
+                  <a href="#"><img src="images/content/productions/6.jpg"></a>
                 </div>
                 <div class="description">
-                  <div class="title"><a href="#">Куртка, Lassie by Reima</a></div>
+                  <div class="title">
+                    <a href="#">Куртка, Lassie by Reima</a>
+                  </div>
+                  <div class="category"><a href="#">Одежда и обувь</a></div>
+                  <div class="lead-paragraph">Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.</div>
                   <div class="item-footer">
                     <div class="top">
                       <div class="price">
                         <div class="old">111 790 руб.</div>
                         <div class="current">111 690 руб.</div>
                       </div>
-                      <div class="add-to-cart"><a href="#" title="Добавить в корзину"></a></div>
+                      <div class="add-to-cart">
+                        <a href="#" title="Добавить в корзину"></a>
+                      </div>
+                    </div>
+                    <div class="bottom">
+                      <div class="counter">
+                        <form method="post" action="">
+                            <button class="plus">+</button>
+                            <input type="text" value="1" class="counter-inp">
+                            <button class="minus">-</button>
+                        </form>
+                      </div>
+                      <div class="options">
+                        <div class="zoom">
+                          <a href="#"></a>
+                        </div>
+                        <div class="param">
+                          <a href="#"></a>
+                        </div>
+                        <div class="favourite">
+                          <a href="#" title="Добавить в избранное"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden hidden-details">
+                  <div class="colors">
+                    <span class="title">Цвет:</span>
+                    <div class="colors-list">
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #fff; border: 1px solid #d8d7d6;"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #a6a6a6"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #000"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #dd1a31"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #ff6eaf"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="sizes">
+                    <span class="title">Размер:</span>
+                    <div class="sizes-list">
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>12</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>13</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>66</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>99</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>88</span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -289,17 +620,95 @@
             <div class="item">
               <div class="item-wrapper">
                 <div class="image">
-                  <a href="#"><img src="images/content/items-top/5.jpg"></a>
+                  <a href="#"><img src="images/content/productions/6.jpg"></a>
                 </div>
                 <div class="description">
-                  <div class="title"><a href="#">Куртка, Lassie by Reima</a></div>
+                  <div class="title">
+                    <a href="#">Куртка, Lassie by Reima</a>
+                  </div>
+                  <div class="category"><a href="#">Одежда и обувь</a></div>
+                  <div class="lead-paragraph">Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.</div>
                   <div class="item-footer">
                     <div class="top">
                       <div class="price">
                         <div class="old">111 790 руб.</div>
                         <div class="current">111 690 руб.</div>
                       </div>
-                      <div class="add-to-cart"><a href="#" title="Добавить в корзину"></a></div>
+                      <div class="add-to-cart">
+                        <a href="#" title="Добавить в корзину"></a>
+                      </div>
+                    </div>
+                    <div class="bottom">
+                      <div class="counter">
+                        <form method="post" action="">
+                            <button class="plus">+</button>
+                            <input type="text" value="1" class="counter-inp">
+                            <button class="minus">-</button>
+                        </form>
+                      </div>
+                      <div class="options">
+                        <div class="zoom">
+                          <a href="#"></a>
+                        </div>
+                        <div class="param">
+                          <a href="#"></a>
+                        </div>
+                        <div class="favourite">
+                          <a href="#" title="Добавить в избранное"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden hidden-details">
+                  <div class="colors">
+                    <span class="title">Цвет:</span>
+                    <div class="colors-list">
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #fff; border: 1px solid #d8d7d6;"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #a6a6a6"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #000"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #dd1a31"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #ff6eaf"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="sizes">
+                    <span class="title">Размер:</span>
+                    <div class="sizes-list">
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>12</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>13</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>66</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>99</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>88</span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -309,21 +718,99 @@
         </div>
         <div class="viewed-items popular-items main-items">
           <h2 class="headling red small">Просмотренные товары</h2>
-          <div class="items-list">
+          <div class="items-list view-block">
             <div class="item">
               <div class="item-wrapper">
                 <div class="image">
-                  <a href="#"><img src="images/content/items-top/7.jpg"></a>
+                  <a href="#"><img src="images/content/productions/6.jpg"></a>
                 </div>
                 <div class="description">
-                  <div class="title"><a href="#">Куртка, Lassie by Reima</a></div>
+                  <div class="title">
+                    <a href="#">Куртка, Lassie by Reima</a>
+                  </div>
+                  <div class="category"><a href="#">Одежда и обувь</a></div>
+                  <div class="lead-paragraph">Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.</div>
                   <div class="item-footer">
                     <div class="top">
                       <div class="price">
                         <div class="old">111 790 руб.</div>
                         <div class="current">111 690 руб.</div>
                       </div>
-                      <div class="add-to-cart"><a href="#" title="Добавить в корзину"></a></div>
+                      <div class="add-to-cart">
+                        <a href="#" title="Добавить в корзину"></a>
+                      </div>
+                    </div>
+                    <div class="bottom">
+                      <div class="counter">
+                        <form method="post" action="">
+                            <button class="plus">+</button>
+                            <input type="text" value="1" class="counter-inp">
+                            <button class="minus">-</button>
+                        </form>
+                      </div>
+                      <div class="options">
+                        <div class="zoom">
+                          <a href="#"></a>
+                        </div>
+                        <div class="param">
+                          <a href="#"></a>
+                        </div>
+                        <div class="favourite">
+                          <a href="#" title="Добавить в избранное"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden hidden-details">
+                  <div class="colors">
+                    <span class="title">Цвет:</span>
+                    <div class="colors-list">
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #fff; border: 1px solid #d8d7d6;"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #a6a6a6"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #000"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #dd1a31"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #ff6eaf"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="sizes">
+                    <span class="title">Размер:</span>
+                    <div class="sizes-list">
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>12</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>13</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>66</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>99</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>88</span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -332,17 +819,95 @@
             <div class="item">
               <div class="item-wrapper">
                 <div class="image">
-                  <a href="#"><img src="images/content/items-top/6.jpg"></a>
+                  <a href="#"><img src="images/content/productions/6.jpg"></a>
                 </div>
                 <div class="description">
-                  <div class="title"><a href="#">Куртка, Lassie by Reima</a></div>
+                  <div class="title">
+                    <a href="#">Куртка, Lassie by Reima</a>
+                  </div>
+                  <div class="category"><a href="#">Одежда и обувь</a></div>
+                  <div class="lead-paragraph">Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.</div>
                   <div class="item-footer">
                     <div class="top">
                       <div class="price">
                         <div class="old">111 790 руб.</div>
                         <div class="current">111 690 руб.</div>
                       </div>
-                      <div class="add-to-cart"><a href="#" title="Добавить в корзину"></a></div>
+                      <div class="add-to-cart">
+                        <a href="#" title="Добавить в корзину"></a>
+                      </div>
+                    </div>
+                    <div class="bottom">
+                      <div class="counter">
+                        <form method="post" action="">
+                            <button class="plus">+</button>
+                            <input type="text" value="1" class="counter-inp">
+                            <button class="minus">-</button>
+                        </form>
+                      </div>
+                      <div class="options">
+                        <div class="zoom">
+                          <a href="#"></a>
+                        </div>
+                        <div class="param">
+                          <a href="#"></a>
+                        </div>
+                        <div class="favourite">
+                          <a href="#" title="Добавить в избранное"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden hidden-details">
+                  <div class="colors">
+                    <span class="title">Цвет:</span>
+                    <div class="colors-list">
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #fff; border: 1px solid #d8d7d6;"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #a6a6a6"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #000"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #dd1a31"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #ff6eaf"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="sizes">
+                    <span class="title">Размер:</span>
+                    <div class="sizes-list">
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>12</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>13</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>66</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>99</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>88</span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -351,17 +916,95 @@
             <div class="item">
               <div class="item-wrapper">
                 <div class="image">
-                  <a href="#"><img src="images/content/items-top/5.jpg"></a>
+                  <a href="#"><img src="images/content/productions/6.jpg"></a>
                 </div>
                 <div class="description">
-                  <div class="title"><a href="#">Куртка, Lassie by Reima</a></div>
+                  <div class="title">
+                    <a href="#">Куртка, Lassie by Reima</a>
+                  </div>
+                  <div class="category"><a href="#">Одежда и обувь</a></div>
+                  <div class="lead-paragraph">Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.</div>
                   <div class="item-footer">
                     <div class="top">
                       <div class="price">
                         <div class="old">111 790 руб.</div>
                         <div class="current">111 690 руб.</div>
                       </div>
-                      <div class="add-to-cart"><a href="#" title="Добавить в корзину"></a></div>
+                      <div class="add-to-cart">
+                        <a href="#" title="Добавить в корзину"></a>
+                      </div>
+                    </div>
+                    <div class="bottom">
+                      <div class="counter">
+                        <form method="post" action="">
+                            <button class="plus">+</button>
+                            <input type="text" value="1" class="counter-inp">
+                            <button class="minus">-</button>
+                        </form>
+                      </div>
+                      <div class="options">
+                        <div class="zoom">
+                          <a href="#"></a>
+                        </div>
+                        <div class="param">
+                          <a href="#"></a>
+                        </div>
+                        <div class="favourite">
+                          <a href="#" title="Добавить в избранное"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden hidden-details">
+                  <div class="colors">
+                    <span class="title">Цвет:</span>
+                    <div class="colors-list">
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #fff; border: 1px solid #d8d7d6;"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #a6a6a6"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #000"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #dd1a31"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #ff6eaf"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="sizes">
+                    <span class="title">Размер:</span>
+                    <div class="sizes-list">
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>12</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>13</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>66</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>99</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>88</span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -370,17 +1013,95 @@
             <div class="item">
               <div class="item-wrapper">
                 <div class="image">
-                  <a href="#"><img src="images/content/items-top/4.jpg"></a>
+                  <a href="#"><img src="images/content/productions/6.jpg"></a>
                 </div>
                 <div class="description">
-                  <div class="title"><a href="#">Куртка, Lassie by Reima</a></div>
+                  <div class="title">
+                    <a href="#">Куртка, Lassie by Reima</a>
+                  </div>
+                  <div class="category"><a href="#">Одежда и обувь</a></div>
+                  <div class="lead-paragraph">Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.</div>
                   <div class="item-footer">
                     <div class="top">
                       <div class="price">
                         <div class="old">111 790 руб.</div>
                         <div class="current">111 690 руб.</div>
                       </div>
-                      <div class="add-to-cart"><a href="#" title="Добавить в корзину"></a></div>
+                      <div class="add-to-cart">
+                        <a href="#" title="Добавить в корзину"></a>
+                      </div>
+                    </div>
+                    <div class="bottom">
+                      <div class="counter">
+                        <form method="post" action="">
+                            <button class="plus">+</button>
+                            <input type="text" value="1" class="counter-inp">
+                            <button class="minus">-</button>
+                        </form>
+                      </div>
+                      <div class="options">
+                        <div class="zoom">
+                          <a href="#"></a>
+                        </div>
+                        <div class="param">
+                          <a href="#"></a>
+                        </div>
+                        <div class="favourite">
+                          <a href="#" title="Добавить в избранное"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden hidden-details">
+                  <div class="colors">
+                    <span class="title">Цвет:</span>
+                    <div class="colors-list">
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #fff; border: 1px solid #d8d7d6;"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #a6a6a6"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #000"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #dd1a31"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #ff6eaf"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="sizes">
+                    <span class="title">Размер:</span>
+                    <div class="sizes-list">
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>12</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>13</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>66</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>99</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>88</span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -389,17 +1110,95 @@
             <div class="item">
               <div class="item-wrapper">
                 <div class="image">
-                  <a href="#"><img src="images/content/items-top/3.jpg"></a>
+                  <a href="#"><img src="images/content/productions/6.jpg"></a>
                 </div>
                 <div class="description">
-                  <div class="title"><a href="#">Куртка, Lassie by Reima</a></div>
+                  <div class="title">
+                    <a href="#">Куртка, Lassie by Reima</a>
+                  </div>
+                  <div class="category"><a href="#">Одежда и обувь</a></div>
+                  <div class="lead-paragraph">Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.Удобные и практичные джинсы. Модель с застежкой на молнию и пуговицу.</div>
                   <div class="item-footer">
                     <div class="top">
                       <div class="price">
                         <div class="old">111 790 руб.</div>
                         <div class="current">111 690 руб.</div>
                       </div>
-                      <div class="add-to-cart"><a href="#" title="Добавить в корзину"></a></div>
+                      <div class="add-to-cart">
+                        <a href="#" title="Добавить в корзину"></a>
+                      </div>
+                    </div>
+                    <div class="bottom">
+                      <div class="counter">
+                        <form method="post" action="">
+                            <button class="plus">+</button>
+                            <input type="text" value="1" class="counter-inp">
+                            <button class="minus">-</button>
+                        </form>
+                      </div>
+                      <div class="options">
+                        <div class="zoom">
+                          <a href="#"></a>
+                        </div>
+                        <div class="param">
+                          <a href="#"></a>
+                        </div>
+                        <div class="favourite">
+                          <a href="#" title="Добавить в избранное"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden hidden-details">
+                  <div class="colors">
+                    <span class="title">Цвет:</span>
+                    <div class="colors-list">
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #fff; border: 1px solid #d8d7d6;"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #a6a6a6"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #000"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #dd1a31"></span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="color-item" type="radio"/>
+                        <span style="background: #ff6eaf"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="sizes">
+                    <span class="title">Размер:</span>
+                    <div class="sizes-list">
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>12</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>13</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>66</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>99</span>
+                      </label>
+                      <label class="radio-custom">
+                        <input name="size-item" type="radio"/>
+                        <span>88</span>
+                      </label>
                     </div>
                   </div>
                 </div>
